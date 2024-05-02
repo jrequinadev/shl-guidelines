@@ -1,0 +1,2170 @@
+<?xml version='1.0' encoding='ASCII'?>
+<html lang="en">
+  <head>
+    <title>MASTER SHL Guidelines</title>
+    <link rel="Stylesheet" href="bstrap.min.css"/>
+    <link rel="Stylesheet" href="take1.css"/>
+    <link rel="Stylesheet" href="jquery.scrollbar.css"/>
+    <script src="solid.js"> </script>
+    <script src="fontawesome.js"> </script>
+    <script src="take1.js"> </script>
+    <script src="jquery.js"> </script>
+    <script src="popper.min.js"> </script>
+    <script src="bstrap.min.js"> </script>
+    <script src="jquery.scrollbar.js"> </script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <nav id="sidebar">
+        <div class="sidebar-header">
+          <h3>Vitac Job Specs</h3>
+        </div>
+        <ul class="list-unstyled sidenavbuttons">
+          <li>
+            <a class="btn btn-info" data-toggle="modal" data-target="#tipsModal">Job Spec Tips</a>
+          </li>
+          <li>
+            <a onclick="toggleCollapse();" id="collapseall" class="btn btn-warning">Expand tabs</a>
+          </li>
+          <li>
+            <a onclick="toggleImportantVisibility();" class="collapsebutton">
+              <span class="warn-icon">&#160;!&#160;</span>
+              <span id="toggleimportant">Only show important</span>
+            </a>
+          </li>
+        </ul>
+        <div class="sidebar-header">
+          <h5>Sections:</h5>
+        </div>
+        <ul class="list-unstyled sidenavbuttons">
+          <li>
+            <a class="navbutton" onClick="window.location.href='#tab-Media'; setMenuButtons(this);">Media</a>
+          </li>
+          <li>
+            <a class="navbutton" onClick="window.location.href='#tab-Timecode'; setMenuButtons(this);">Timecode</a>
+          </li>
+          <li>
+            <a class="navbutton" onClick="window.location.href='#tab-Audio'; setMenuButtons(this);">Audio</a>
+          </li>
+          <li>
+            <a class="navbutton" onClick="window.location.href='#tab-Visual'; setMenuButtons(this);">Visual</a>
+          </li>
+          <li>
+            <a class="navbutton" onClick="window.location.href='#tab-Grammar&amp;Punctuation'; setMenuButtons(this);">Grammar &amp; Punctuation</a>
+          </li>
+          <li>
+            <a class="navbutton" onClick="window.location.href='#tab-SupportMaterial'; setMenuButtons(this);">Support Material</a>
+          </li>
+        </ul>
+        <div class="sidebar-header">
+          <h5>Key:</h5>
+        </div>
+        <ul class="navbar-key">
+          <li>
+            <p class="dangerkey">Important</p>
+          </li>
+          <li>
+            <p class="noticekey">Content Label</p>
+          </li>
+          <li>
+            <p class="stylekey">Style Guide</p>
+          </li>
+          <li>
+            <p class="markerkey">Marker</p>
+          </li>
+          <li>
+            <p class="metakey">Meta Highlighter</p>
+          </li>
+          <li>
+            <p class="troublekey">Troubleshooting</p>
+          </li>
+        </ul>
+      </nav>
+      <div class="modal fade" id="tipsModal" tabindex="-1" role="dialog" aria-labelledby="modal-tips" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modal-tips">Job Specs Tips</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&#215;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <h5>Search function:</h5>
+              <p>Expand all tabs and then use CTRL + F to find all instances of the word or phrase you want to search for.</p>
+              <h5>Important job specs:</h5>
+              <p>These must be read for every job. Customers can change these requirements from job-to-job, so they must be read for each job. If you only want to review the job specs marked as important, you can click the 'only show important' button to only show a list of important instructions.</p>
+              <h5>Job spec sections:</h5>
+              <p>These sections group the job specs into logical blocks. For example, if you see something on-screen, then you will likely need to look at the Visual section. If you hear something, you will likely need to look at the Audio section.</p>
+              <h5>Key:</h5>
+              <p>The key informs you what the different colours mean. For example, green instructions are style guides that inform you how to type something.</p>
+              <h5>Something not here?</h5>
+              <p>The Job Specs communicate the requirements of the customer for this particular job. If you need to find out how the software works, it will likely be in the software's manual. If you have a question related to working for Vitac in general, then it is probably in the general working practices document.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="content">
+        <nav class="navbar navbar-expand navbar-dark bg-dark fixed-top">
+          <div class="container-fluid">
+            <button type="button" id="sidebarCollapse" class="btn btn-light">
+              <i class="fas fa-align-left"> </i>
+              <span>Toggle Sidebar</span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <h2 class="nav navbar-nav nav-item active ml-auto text-white">
+                <span>Guidelines for:&#160;</span>
+                <span class="badge badge-light">SHOT-LOGGING</span>
+              </h2>
+            </div>
+          </div>
+        </nav>
+        <div class="main-content">
+		<div id="tab-Important" style="padding-bottom: 40px;">
+            <h3 class="cathead">Important</h3>
+            <p>These instructions are likely to vary from job to job, so please read them carefully to ensure you are capturing the correct content in your script.</p>
+			<div class="card" id="si-Grammar&amp;Punctuation-Dictionary" primarysort="1" secondarysort="Style_Guide">
+                <h5 class="alert alert-danger">
+                  <a data-toggle="collapse" data-target="#si-Dictionary" href="javascript:void(0);">
+                    <span class="warn-icon">&#160;!&#160;</span>
+                    <span class="badge role-icon badge-success">Style Guide</span>
+                    <span class="badge role-icon badge-danger" style="margin-right:10px;">CHECK IN PLATFORM</span>
+                    <span>Required dictionary</span>
+                  </a>
+                </h5>
+                <div id="si-Dictionary" class="card-body card-important collapse">
+                  <p>
+                    <table width="100%" cellpadding="2" class="table table-condensed table-bordered">
+                      <th colspan="2">Job Spec</th>
+                      <tr>
+                        <td>
+                          <p>Please check the job instructions in the platform for instructions on the dictionary you are required to use for this job.</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </p>
+                </div>
+              </div>
+			  <div class="card" id="si-Media-TranscribeWholeRecording" primarysort="1" secondarysort="Style_Guide">
+                <h5 class="alert alert-danger">
+                  <a data-toggle="collapse" data-target="#si-TranscribeWholeRecording" href="javascript:void(0);">
+                    <span class="warn-icon">&#160;!&#160;</span>
+                    <span class="badge role-icon badge-success">Style Guide</span>
+                    <span class="badge role-icon badge-danger" style="margin-right:10px;">Important!</span>
+                    <span>Watch entire media file</span>
+                  </a>
+                </h5>
+                <div id="si-TranscribeWholeRecording" class="card-body card-important collapse">
+                  <p>
+                    <table width="100%" cellpadding="2" class="table table-condensed table-bordered">
+                      <th colspan="2">Job Spec</th>
+                      <tr>
+                        <td>The entire media file should be watched, transcribing content according to the job instructions. If you have been given sections of the media file to transcribe, only watch these sections.</td>
+                      </tr>
+                    </table>
+                  </p>
+                  <div class="troubleshootingopen">
+                    <h5 style="padding-top: 30px;" class="troubleshootingheader">Troubleshooting tips:</h5>
+                    <table width="100%" cellpadding="2" class="table table-condensed table-bordered">
+                      <tr>
+                        <th class="troubleshooting" width="180px">Problem</th>
+                        <th class="troubleshooting">Solution</th>
+                      </tr>
+                      <tr>
+                        <td class="troubleshooting">The media file duration does not match the job slip duration</td>
+                        <td class="troubleshooting">If the duration of the media file does not match the duration quoted on the job slip, an issue report must be submitted.</td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+			  
+              
+			  
+			  
+			  
+			  
+			  
+          <div id="tab-Media" style="padding-bottom: 40px;">
+            <h3 class="cathead">Media</h3>
+            <p>Any job specs that relate specifically to the media file are found in this section.</p>
+            <div class="catcards">
+              <div class="card" id="si-Media-Archive" primarysort="1" secondarysort="Clip_Type">
+                <h5 class="alert alert-warning">
+                  <a data-toggle="collapse" data-target="#si-Archive" href="javascript:void(0);">
+                    <span class="badge role-icon badge-warning">Clip Type</span>
+                    <span>Archive</span>
+                  </a>
+                </h5>
+                <div id="si-Archive" class="card-body card-important collapse">
+                  <p>
+                    <table width="100%" cellpadding="2" class="table table-condensed table-bordered">
+                      <th colspan="2">Job Spec</th>
+                      <tr>
+                        <th class="" width="180px">Description</th>
+                        <td>
+                          <p>Archive is footage taken from an archive collection. It is older footage being used inside a newer programme.</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th class="">How To Identify</th>
+                        <td>
+                          <p>Archive material can usually be recognised by a change in quality. The quality of the sound or the visuals during archive may differ from the rest of the programme. Perhaps, the colours look different, or there is no colour at all and the archive is in black and white.</p>
+                          <p>Archive is often used by documentaries about historic events, sometimes the only way to get authentic footage of a real life event is to use footage from an archive collection.</p>
+                          <p>Footage from previous episodes of the same programme is considered as archive. This is because it was footage recorded for a previous show and is therefore considered as borrowing from an archive collection.</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </p>
+                  <div class="troubleshootingopen">
+                    <h5 style="padding-top: 30px;" class="troubleshootingheader">Troubleshooting tips:</h5>
+                    <table width="100%" cellpadding="2" class="table table-condensed table-bordered">
+                      <tr>
+                        <th class="troubleshooting" width="180px">Problem</th>
+                        <th class="troubleshooting">Solution</th>
+                      </tr>
+                      <tr>
+                        <td class="troubleshooting">Recognising Archive</td>
+                        <td class="troubleshooting">
+                          <p>Archive footage is taken from is material obtained from a film library or archive and inserted into a documentary to show historical events or to add detail without the need for additional filming.  Archive footage would likely have been recorded on older equipment than the rest of the footage on the media file, meaning it is often easy to identify archive by the difference in media quality. The colours may be different (it may even be black and white), the sound may not be as clear, and there may even be pixellation or fuzziness.</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="card" id="si-Media-Reconstruction" primarysort="1" secondarysort="Clip_Type">
+                <h5 class="alert alert-warning">
+                  <a data-toggle="collapse" data-target="#si-Reconstruction" href="javascript:void(0);">
+                    <span class="badge role-icon badge-warning">Clip Type</span>
+                    <span>Reconstruction</span>
+                  </a>
+                </h5>
+                <div id="si-Reconstruction" class="card-body card-important collapse">
+                  <p>
+                    <table width="100%" cellpadding="2" class="table table-condensed table-bordered">
+                      <th colspan="2">Job Spec</th>
+                      <tr>
+                        <th class="" width="180px">Description</th>
+                        <td>
+                          <p>Reconstruction is footage that has been filmed to reconstruct real-life events using actors. Reconstruction footage is often accompanied by interviews of the persons involved in the real-life events.</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th class="">How To Identify</th>
+                        <td>
+                          <p>Reconstruction material uses actors to portray a dramatisation of real-life events. This footage is often accompanied with interviews with the persons involved in the real-life event. For example, an interview with a policeman talking about a police raid may be followed by reconstruction footage with an actor portraying the policeman entering a buidling.</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </p>
+                  <div class="troubleshootingopen">
+                    <h5 style="padding-top: 30px;" class="troubleshootingheader">Troubleshooting tips:</h5>
+                    <table width="100%" cellpadding="2" class="table table-condensed table-bordered">
+                      <tr>
+                        <th class="troubleshooting" width="180px">Problem</th>
+                        <th class="troubleshooting">Solution</th>
+                      </tr>
+                      <tr>
+                        <td class="troubleshooting">Recognising reconstruction</td>
+                        <td class="troubleshooting">
+                          <p>Reconstruction provides a dramatization of real life events. It only needs to be logged when the reconstruction is found on a media file with 'real life' footage (usually interviews with the persons involved. If the entirety of the media consists of dramatizations of real life events (e.g. a film like the King's Speech) then there is no need to log reconstruction as it is assumed.</p>
+                          <p>Reconstruction consists of artificial scenes of an event which have been reconstructed and acted out on film based on information of the event. Reconstructions generally provide factual information, and give the viewer a sense of realism, as if the event really happened in front of them live. They often indicate that the footage is not real by using techniques such as blurring, distortion, lighting effects, changes in camera level, and colour enhancement within the footage.</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="card" id="si-Media-AdBreak" primarysort="2" secondarysort="Content_Label">
+                <h5 class="alert alert-warning">
+                  <a data-toggle="collapse" data-target="#si-AdBreak" href="javascript:void(0);">
+                    <span class="badge role-icon badge-warning">Content Label</span>
+                    <span>Ad Break</span>
+                  </a>
+                </h5>
+                <div id="si-AdBreak" class="card-body card-normal collapse">
+                  <p>
+                    <table width="100%" cellpadding="2" class="table table-condensed table-bordered">
+                      <th colspan="2">Job Spec</th>
+                      <tr>
+                        <th class="" width="180px">Description</th>
+                        <td>
+                          <p>Ad breaks are breaks in a programme for commerical advertisements.</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th class="">How To Identify</th>
+                        <td>
+                          <p>An ad break on TV will contain commercial advertisements. However, the files sent for transcription will usually not show these adverts. Instead, the screen often blacks out for the duration that ad breaks would have been showing.</p>
+                          <p>Some TV companies edit the ad break out so the screen will only go black for a second or so. This pause can still be recognised as an ad-break as the new part will often show the show's title again, or the narrator will recap the previous part etc.</p>
+                          <p>During an ad break, a clock screen may appear.</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="tab-Timecode" style="padding-bottom: 40px;">
+            <h3 class="cathead">Timecode</h3>
+            <p>Any job specs that relate specifically to timecodes can be found in this section.</p>
+            <div class="catcards">
+              <div class="card" id="si-Timecode-NoBITC?" primarysort="2" secondarysort="Style_Guide">
+                <h5 class="alert alert-success">
+                  <a data-toggle="collapse" data-target="#si-NoBITC" href="javascript:void(0);">
+                    <span class="badge role-icon badge-success">Style Guide</span>
+                    <span>No BITC?</span>
+                  </a>
+                </h5>
+                <div id="si-NoBITC" class="card-body card-normal collapse">
+                  <p>
+                    <table width="100%" cellpadding="2" class="table table-condensed table-bordered">
+                      <th colspan="2">Job Spec</th>
+                      <tr>
+                        <td>
+                          <p>When there is no BITC, and the timecode has not calibrated automatically, the timecode is calibrated to 10:00:00:00 at the first frame of the programme starting. It is important that the file is calibrated to the first frame at which the programme begins, not the first frame of the media file. Some programmes will start with a fade up, others with a clear cut edit. The important thing is that the file is calibrated to 10:00:00:00 the frame at which the fade up begins or the image appears.</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </p>
+                  <div class="troubleshootingopen">
+                    <h5 style="padding-top: 30px;" class="troubleshootingheader">Troubleshooting tips:</h5>
+                    <table width="100%" cellpadding="2" class="table table-condensed table-bordered">
+                      <tr>
+                        <th class="troubleshooting" width="180px">Problem</th>
+                        <th class="troubleshooting">Solution</th>
+                      </tr>
+                      <tr>
+                        <td class="troubleshooting">What is timecode?</td>
+                        <td class="troubleshooting">Timecode consists of 8 numbers separated by colons, and represents hours, minutes, second and frames. For example:<ul><li><font color="red">05:</font>00:23:21 - the figure in red represents hours</li><ul><li>05:<font color="red">00:</font>23:21 - the figure in red represents minutes</li><ul><li>05:00:<font color="red">23:</font>21 - the figure in red represents seconds</li><ul><li>05:00:23:<font color="red">21</font> - the figure in red represents frames</li></ul>As the media plays, the timecode runs like a clock. It keeps track of when things are said and helps the TV editor put the programme together. Our job is to put timecodes into our script. This is done by stamping a new timecode into our transcript every time the interviewer asks a question and every time the interviewee answers it.</ul></ul></ul></td>
+                      </tr>
+                      <tr>
+                        <td class="troubleshooting">Why is timecode calibrated?</td>
+                        <td class="troubleshooting">Each media file will have its own unique timecode. It is vital that every media file is accurately calibrated. A script with incorrect timecode is useless to our clients, which means it is useless to us.<p>Fortunately, this software was designed to make the task of timecoding very straightforward and easy. Instead of typing the timecode manually, shortcut keys can be used to stamp it automatically into the transcript. However, some media files require the user to tell the software what the timecode value is for the media that is being worked on. This will enable the software's timecode shortcuts.</p><p>Some media files calibrate automatically, meaning that they do not need to be manually calibrated.</p><p>Some media files do not calibrate automatically, nor do they have timecode onscreen, so specific instructions for that job should be followed to calibrate the media file.</p></td>
+                      </tr>
+                      <tr>
+                        <td class="troubleshooting">When is timecode calibrated?</td>
+                        <td class="troubleshooting">If a media file does not calibrate automatically, it should be calibrated upon opening the media file. The timecode should stay in sync, meaning that calibration is only required once. However, if the timecode gets out of sync, then see the timecode drift and timecode jump troubleshooting tips. </td>
+                      </tr>
+                      <tr>
+                        <td class="troubleshooting">How is timecode calibrated?</td>
+                        <td class="troubleshooting">The software should prompt timecode calibration when a media file is opened. If the timecode needs to be recalibrated, then <strong>Calibrate Timecode</strong> can be found under the <strong>Tools</strong> menu. When calibrating timecode, the software should choose the correct Video Format, but if the timecode drifts out of sync, selecting a different Video format may prevent the issue. Selecting top or bottom will tell the software where to display the calibrated timecode on the media player.</td>
+                      </tr>
+                      <tr>
+                        <td class="troubleshooting">There is no BITC on the media file (UK Post-Edit)</td>
+                        <td class="troubleshooting">When there is no BITC, and the timecode has not calibrated automatically, the timecode is calibrated to 10:00:00:00 at the first frame of the programme starting. It is important that the file is calibratedto the first frame at which the programmen begins, not the first frame of the media file. Some programmes will start with a fade up, others with a clear cut edit. The important thing is that the file is calibrated to 10:00:00:00 the frame at which the fade up begins / image appears.</td>
+                      </tr>
+                      <tr>
+                        <td class="troubleshooting">The BITC is illegible</td>
+                        <td class="troubleshooting">If the BITC is illegible, then try the following troubleshooting tips:<ul><li>Resizing the media file window may improve the legibility of a timecode.</li><li>Skipping through the media file frame by frame may help locate a legible timecode.</li><li>It is usually easy to see when a timecode ticks over into what is logically the next timecode, for example: 09:59:59:23 ticking over to 10:00:00:00 is an obvious change both visually and logically.</li></ul>If troubleshooting fails, an issue report is submitted and transcription is stopped.</td>
+                      </tr>
+                      <tr>
+                        <td class="troubleshooting">How to amend a timecode in the script</td>
+                        <td class="troubleshooting">If a timecode in your script is wrong, it can be replaced with ease. Line up the media file to the correct timecode, then click on the incorrect timecode once and press F1. This will update the timecode with the timecode on the media player.</td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="tab-Audio" style="padding-bottom: 40px;">
+            <h3 class="cathead">Audio</h3>
+            <p>Any job specs that relate specifically to the audio can be found in this section.</p>
+            <div class="catcards">
+              <div class="card" id="si-Audio-Unknownmarkersarelogged" primarysort="2" secondarysort="Style_Guide">
+                <h5 class="alert alert-success">
+                  <a data-toggle="collapse" data-target="#si-Unknownmarkersarelogged" href="javascript:void(0);">
+                    <span class="badge role-icon badge-success">Style Guide</span>
+                    <span>Unknown markers are logged</span>
+                  </a>
+                </h5>
+                <div id="si-Unknownmarkersarelogged" class="card-body card-normal collapse">
+                  <p>
+                    <table width="100%" cellpadding="2" class="table table-condensed table-bordered">
+                      <th colspan="2">Job Spec</th>
+                      <tr>
+                        <td>
+                          <p>In a scenario where it has not been possible to identify the word(s) being transcribed, it should be substituted by an unknown marker.</p>
+                          <p>A common example of an 'unknown' marker is the inaudible marker: It has been identified that there is dialogue, but it cannot be heard. Instead of ignoring the dialogue, an inaudible marker is used.</p>
+                          <p>Some 'unknown' marker types will ask for an attempt, allowing you to provide an educated guess of the word(s). Markers with an attempt make it more efficient to QC a script, and also allow us to communicate areas of concern to the client.</p>
+                          <p>Always use the suggested 'unknown' marker types where possible. If none of them apply, a custom 'unknown' marker can be used. Remember: the purpose is to communicate that something would ordinarily be included in this script, but it has not been possible to identify and type the words with confidence.</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="tab-Visual" style="padding-bottom: 40px;">
+            <h3 class="cathead">Visual</h3>
+            <p>Any job specs that relate specifically to the visuals can be found in this section.</p>
+            <div class="catcards">
+              <div class="card" id="si-Visual-Aerial" primarysort="2" secondarysort="Content_Label">
+                <h5 class="alert alert-warning">
+                  <a data-toggle="collapse" data-target="#si-Aerial" href="javascript:void(0);">
+                    <span class="badge role-icon badge-warning">Content Label</span>
+                    <span>Aerial</span>
+                  </a>
+                </h5>
+                <div id="si-Aerial" class="card-body card-normal collapse">
+                  <p>
+                    <table width="100%" cellpadding="2" class="table table-condensed table-bordered">
+                      <th colspan="2">Job Spec</th>
+                      <tr>
+                        <th class="" width="180px">Description</th>
+                        <td>
+                          <p>A shot taken from a flying vehicle.</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th class="">How To Identify</th>
+                        <td>
+                          <p>A shot taken from onboard a plane or helicopter. Usually a shot of a landscape or cityscape.</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </p>
+                </div>
+              </div>
+              <div class="card" id="si-Visual-Caption" primarysort="2" secondarysort="Content_Label">
+                <h5 class="alert alert-warning">
+                  <a data-toggle="collapse" data-target="#si-Caption" href="javascript:void(0);">
+                    <span class="badge role-icon badge-warning">Content Label</span>
+                    <span>Caption</span>
+                  </a>
+                </h5>
+                <div id="si-Caption" class="card-body card-normal collapse">
+                  <p>
+                    <table width="100%" cellpadding="2" class="table table-condensed table-bordered">
+                      <th colspan="2">Job Spec</th>
+                      <tr>
+                        <th class="" width="180px">Description</th>
+                        <td>
+                          <p>A simple onscreen text event.</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th class="">How To Identify</th>
+                        <td>
+                          <p>Captions - used to supply the viewer with extra information to further their viewing pleasure - are usually a simple text event that could display a name, a place name, time, date, the text Coming up or Next week on Horizon etc. Captions can also be larger bodies of text, such as lists, personal profiles/bio and legal disclaimers etc. </p>
+                          <p>Whilst captions tend not to change or evolve, they may be animated to fade in, swipe from the side of the screen, or appear line by line etc. As long as the text is readable in real-time by the viewer, it is likely going to be a caption.</p>
+                          <p><strong>NOTE:</strong> Not all text on screen should be labelled as a caption. Ensure that you are aware of the other visual event types before selecting caption. For example:</p>
+                          <ul>
+                            <li>Changing text, like money counters, or countdown timers, are not captions, they are Graphics on Screen.</li>
+                            <li>Text that provides translation of the dialogue is not a caption, it is a Language Subtitle.</li>
+                            <li>Text that repeats the dialogue in the same language is a Subtitle.</li>
+                            <li>The name of the episode or the series being transcribed is the Title.</li>
+                          </ul>
+                        </td>
+                      </tr>
+                    </table>
+                  </p>
+                  <div class="troubleshootingopen">
+                    <h5 style="padding-top: 30px;" class="troubleshootingheader">Troubleshooting tips:</h5>
+                    <table width="100%" cellpadding="2" class="table table-condensed table-bordered">
+                      <tr>
+                        <th class="troubleshooting" width="180px">Problem</th>
+                        <th class="troubleshooting">Solution</th>
+                      </tr>
+                      <tr>
+                        <td class="troubleshooting">Onscreen text is illegible</td>
+                        <td class="troubleshooting">Sometimes the quality of a media file will be poor and onscreen text will be illegible. Illegible text is logged with an illegible marker, making a blind guess as to what the text says is not permitted. There are some steps that may resolve the problem:<ul><li>1. Resizing the media player window can improve the legibility of a media file.</li><li>2.Submitting an illegible text issue report can result in a higher quality media file being delivered. Whilst waiting for the new media file, transcriptions is resumed and illegible text is logged with a marker. If a replacement media file arrives, the illegible markers are replaced with the now legible text.</li><li>If a source script is provided, it may reveal what the text says. Usually the illegible text can be compared to the source script and an educated can be made.</li></ul></td>
+                      </tr>
+                      <tr>
+                        <td class="troubleshooting">Logging double captions</td>
+                        <td class="troubleshooting">
+                          <p>Sometimes there might be a caption event whereby two people on screen are captioned at once. It may mean that the person on the left hand side of the screen is captioned, and on the right hand side of the screen the other person is captioned. When this happens, captions are no formated according to what is on screen. Instead double captions are logged as follows: The caption on the left hand side of the screen is copy typed first, then below it, the the caption on the right hand side of the screen is copy typed. If the two captions appear at the same time, they are logged as one caption event. If there's a second or so interval between the captions, they are logged individually with their own timecode.</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="card" id="si-Visual-ClockScreen" primarysort="2" secondarysort="Content_Label">
+                <h5 class="alert alert-warning">
+                  <a data-toggle="collapse" data-target="#si-ClockScreen" href="javascript:void(0);">
+                    <span class="badge role-icon badge-warning">Content Label</span>
+                    <span>Clock Screen</span>
+                  </a>
+                </h5>
+                <div id="si-ClockScreen" class="card-body card-normal collapse">
+                  <p>
+                    <table width="100%" cellpadding="2" class="table table-condensed table-bordered">
+                      <th colspan="2">Job Spec</th>
+                      <tr>
+                        <th class="" width="180px">Description</th>
+                        <td>
+                          <p>Information at the start of a media file that contains information about the programme.&#160;</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th class="">How To Identify</th>
+                        <td>
+                          <p>Often found at the beginning of a show and in the ad-breaks, the clock screen usually shows a clock counting down to the first frame of the show (or the next part of the show). It may also contain information about the show title, episode number, audio setup, aspect ratio etc.</p>
+                          <p>Note that a clock screen may not actually have a countdown clock, but it is always not part of the main show and even if it doesn't have a clock, it will always contain information about the show.</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </p>
+                  <div class="troubleshootingopen">
+                    <h5 style="padding-top: 30px;" class="troubleshootingheader">Troubleshooting tips:</h5>
+                    <table width="100%" cellpadding="2" class="table table-condensed table-bordered">
+                      <tr>
+                        <th class="troubleshooting" width="180px">Problem</th>
+                        <th class="troubleshooting">Solution</th>
+                      </tr>
+                      <tr>
+                        <td class="troubleshooting">Onscreen text is illegible</td>
+                        <td class="troubleshooting">Sometimes the quality of a media file will be poor and onscreen text will be illegible. Illegible text is logged with an illegible marker, making a blind guess as to what the text says is not permitted. There are some steps that may resolve the problem:<ul><li>1. Resizing the media player window can improve the legibility of a media file.</li><li>2.Submitting an illegible text issue report can result in a higher quality media file being delivered. Whilst waiting for the new media file, transcriptions is resumed and illegible text is logged with a marker. If a replacement media file arrives, the illegible markers are replaced with the now legible text.</li><li>If a source script is provided, it may reveal what the text says. Usually the illegible text can be compared to the source script and an educated can be made.</li></ul></td>
+                      </tr>
+                      <tr>
+                        <td class="troubleshooting">No clock screen</td>
+                        <td class="troubleshooting">Not every show has a clock screen at the start of the media file or during the ad-breaks. If there is no clock screen, then it is not logged in the script. Clock screen is only logged when a clock screen appears.</td>
+                      </tr>
+                      <tr>
+                        <td class="troubleshooting">Clock screen information differs to information on job slip</td>
+                        <td class="troubleshooting">If the information on the clock screen differs to the information on the job slip, then you could be working on the wrong media file. It is important that an issue report is submitted immediately and transcription is stopped.<p>In particular it is important that the following fields are checked:</p><ul><li>Job Title</li><li>Job Item No (usually the episode number)</li><li>Job Item Info (usually the episode name or episode code)</li></ul></td>
+                      </tr>
+                      <tr>
+                        <td class="troubleshooting">Media file differs to information on the job slip: continue transcribing</td>
+                        <td class="troubleshooting">If the information on the job slip differs from the content of the media file, then an issue report is submitted, but transcription is resumed. For example, the job slip may inform that the interviewee's name is Jonathan, but the interviewee is actually called Lisa. Use the correct name, but continue transcription.</td>
+                      </tr>
+                      <tr>
+                        <td class="troubleshooting">Media file differs to information on the job slip: stop transcription</td>
+                        <td class="troubleshooting">If the information on the job slip differs from the content of the media file, then transcription is stopped and an issue report is submitted. For example, the job slip may inform that the interviewee's name is Jonathan, but the interviewee is actually called Lisa.</td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="card" id="si-Visual-CloseUp" primarysort="2" secondarysort="Content_Label">
+                <h5 class="alert alert-warning">
+                  <a data-toggle="collapse" data-target="#si-CloseUp" href="javascript:void(0);">
+                    <span class="badge role-icon badge-warning">Content Label</span>
+                    <span>Close-Up</span>
+                  </a>
+                </h5>
+                <div id="si-CloseUp" class="card-body card-normal collapse">
+                  <p>
+                    <table width="100%" cellpadding="2" class="table table-condensed table-bordered">
+                      <th colspan="2">Job Spec</th>
+                      <tr>
+                        <th class="" width="180px">Description</th>
+                        <td>
+                          <p>A close up shot.</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th class="">How To Identify</th>
+                        <td>
+                          <p>This is a close-up camera footage shot of an object, location, person etc. The camera is zoomed in or located much closer on the subject than a normal shot. This should give the viewer a more detailed view of the subject.</p>
+                          <p>For example, cooking shows will often cut to close-up shots of the ingredients that are being used in a recipe. This gives the viewer a good idea of what an ingredient looks likea and how much of the ingredient is required.</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </p>
+                </div>
+              </div>
+              <div class="card" id="si-Visual-ColdOpen" primarysort="2" secondarysort="Content_Label">
+                <h5 class="alert alert-warning">
+                  <a data-toggle="collapse" data-target="#si-ColdOpen" href="javascript:void(0);">
+                    <span class="badge role-icon badge-warning">Content Label</span>
+                    <span>Cold Open</span>
+                  </a>
+                </h5>
+                <div id="si-ColdOpen" class="card-body card-normal collapse">
+                  <p>
+                    <table width="100%" cellpadding="2" class="table table-condensed table-bordered">
+                      <th colspan="2">Job Spec</th>
+                      <tr>
+                        <th class="" width="180px">Description</th>
+                        <td>
+                          <p>Cold Open is a section of the media.</p>
+                          <p>It is used at the very start of a script to indicate when a show jumped straight into the action, with no teaser, recap, or title sequence before.</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th class="">How To Identify</th>
+                        <td>
+                          <p>When a show starts straight into a scene, (i.e. not a recap, not a teaser, not the title sequence), then it is called a cold open. The term 'Cold Open' is a term used to indicate that the audience starts cold, it suggests that the show jumps straight into the action, without using footage to introduce the show to warm the audience up.</p>
+                          <p>If you need to log a Cold Open in your script, it should probably be the first content block in your script (with the exception of the Clock Screen of course).</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </p>
+                </div>
+              </div>
+              <div class="card" id="si-Visual-ConcertFootage" primarysort="2" secondarysort="Content_Label">
+                <h5 class="alert alert-warning">
+                  <a data-toggle="collapse" data-target="#si-ConcertFootage" href="javascript:void(0);">
+                    <span class="badge role-icon badge-warning">Content Label</span>
+                    <span>Concert Footage</span>
+                  </a>
+                </h5>
+                <div id="si-ConcertFootage" class="card-body card-normal collapse">
+                  <p>
+                    <table width="100%" cellpadding="2" class="table table-condensed table-bordered">
+                      <th colspan="2">Job Spec</th>
+                      <tr>
+                        <th class="" width="180px">Description</th>
+                        <td>
+                          <p>Footage of a live music performance.</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th class="">How To Identify</th>
+                        <td>
+                          <p>Shots taken at a concert of musicians performing.</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </p>
+                </div>
+              </div>
+              <div class="card" id="si-Visual-EndCard" primarysort="2" secondarysort="Content_Label">
+                <h5 class="alert alert-warning">
+                  <a data-toggle="collapse" data-target="#si-EndCard" href="javascript:void(0);">
+                    <span class="badge role-icon badge-warning">Content Label</span>
+                    <span>End Card</span>
+                  </a>
+                </h5>
+                <div id="si-EndCard" class="card-body card-normal collapse">
+                  <p>
+                    <table width="100%" cellpadding="2" class="table table-condensed table-bordered">
+                      <th colspan="2">Job Spec</th>
+                      <tr>
+                        <th class="" width="180px">Description</th>
+                        <td>
+                          <p>An onscreen text event which takes up the whole screen.</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th class="">How To Identify</th>
+                        <td>
+                          <p>End cards - usually found at the end of the credits - contain a full-screen logo of the production company with the date the show was made. There may be multiple end cards, all of which should be logged as separate events.</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </p>
+                  <div class="troubleshootingopen">
+                    <h5 style="padding-top: 30px;" class="troubleshootingheader">Troubleshooting tips:</h5>
+                    <table width="100%" cellpadding="2" class="table table-condensed table-bordered">
+                      <tr>
+                        <th class="troubleshooting" width="180px">Problem</th>
+                        <th class="troubleshooting">Solution</th>
+                      </tr>
+                      <tr>
+                        <td class="troubleshooting">Onscreen text is illegible</td>
+                        <td class="troubleshooting">Sometimes the quality of a media file will be poor and onscreen text will be illegible. Illegible text is logged with an illegible marker, making a blind guess as to what the text says is not permitted. There are some steps that may resolve the problem:<ul><li>1. Resizing the media player window can improve the legibility of a media file.</li><li>2.Submitting an illegible text issue report can result in a higher quality media file being delivered. Whilst waiting for the new media file, transcriptions is resumed and illegible text is logged with a marker. If a replacement media file arrives, the illegible markers are replaced with the now legible text.</li><li>If a source script is provided, it may reveal what the text says. Usually the illegible text can be compared to the source script and an educated can be made.</li></ul></td>
+                      </tr>
+                      <tr>
+                        <td class="troubleshooting">Multiple end cards</td>
+                        <td class="troubleshooting">Sometimes there will be mulitple end cards, one after another. Each end card is logged individually.</td>
+                      </tr>
+                      <tr>
+                        <td class="troubleshooting">No end card</td>
+                        <td class="troubleshooting">Not every show has an end card. If there is no end card, then it is not logged in the script. End card is only logged when an end card appears.</td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="card" id="si-Visual-EndCredits" primarysort="2" secondarysort="Content_Label">
+                <h5 class="alert alert-warning">
+                  <a data-toggle="collapse" data-target="#si-EndCredits" href="javascript:void(0);">
+                    <span class="badge role-icon badge-warning">Content Label</span>
+                    <span>Credits</span>
+                  </a>
+                </h5>
+                <div id="si-EndCredits" class="card-body card-normal collapse">
+                  <p>
+                    <table width="100%" cellpadding="2" class="table table-condensed table-bordered">
+                      <th colspan="2">Job Spec</th>
+                      <tr>
+                        <th class="" width="180px">Description</th>
+                        <td>
+                          <p>Text appearing at the end of a programme or film attributing the people who worked on the production.</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th class="">How To Identify</th>
+                        <td>
+                          <p>Credits often roll at the end, either over a black screen or the closing scenes of the show. It is a list of all the people that worked on the production.</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </p>
+                  <div class="troubleshootingopen">
+                    <h5 style="padding-top: 30px;" class="troubleshootingheader">Troubleshooting tips:</h5>
+                    <table width="100%" cellpadding="2" class="table table-condensed table-bordered">
+                      <tr>
+                        <th class="troubleshooting" width="180px">Problem</th>
+                        <th class="troubleshooting">Solution</th>
+                      </tr>
+                      <tr>
+                        <td class="troubleshooting">Onscreen text is illegible</td>
+                        <td class="troubleshooting">Sometimes the quality of a media file will be poor and onscreen text will be illegible. Illegible text is logged with an illegible marker, making a blind guess as to what the text says is not permitted. There are some steps that may resolve the problem:<ul><li>1. Resizing the media player window can improve the legibility of a media file.</li><li>2.Submitting an illegible text issue report can result in a higher quality media file being delivered. Whilst waiting for the new media file, transcriptions is resumed and illegible text is logged with a marker. If a replacement media file arrives, the illegible markers are replaced with the now legible text.</li><li>If a source script is provided, it may reveal what the text says. Usually the illegible text can be compared to the source script and an educated can be made.</li></ul></td>
+                      </tr>
+                      <tr>
+                        <td class="troubleshooting">No end credits</td>
+                        <td class="troubleshooting">Not every show has end credits. If there are no end credits, then they are not logged in the script. End credits are only logged when end credits appear.</td>
+                      </tr>
+                      <tr>
+                        <td class="troubleshooting">End credits are rolling over dialogue</td>
+                        <td class="troubleshooting">When end credits roll over dialogue, end credits are logged exactly where they started, and the dialogue is logged as normal. When credits roll over dialogue, never try to capture both during a single viewing. This means that the footage is watched once to capture the dialogue, and a second time to capture the End Credits.<p>There is no need to write that the end credits are rolling over dialogue.</p></td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="card" id="si-Visual-EndOfProgramme" primarysort="2" secondarysort="Content_Label">
+                <h5 class="alert alert-warning">
+                  <a data-toggle="collapse" data-target="#si-EndOfProgramme" href="javascript:void(0);">
+                    <span class="badge role-icon badge-warning">Content Label</span>
+                    <span>End of Programme</span>
+                  </a>
+                </h5>
+                <div id="si-EndOfProgramme" class="card-body card-normal collapse">
+                  <p>
+                    <table width="100%" cellpadding="2" class="table table-condensed table-bordered">
+                      <th colspan="2">Job Spec</th>
+                      <tr>
+                        <th class="" width="180px">Description</th>
+                        <td>
+                          <p>The end of the programme.</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th class="">How To Identify</th>
+                        <td>
+                          <p>The programme and any credits / end cards have finished and the screen has gone black. When this programme is broadcast, the viewer will not see any more content.</p>
+                          <p>NOTE: If there are snap-ins after the end of the programme and you are required to type them, the end of programme visual event must occur <em>before</em> the snap-ins.</p>
+                          <p class="tab">Snap-Ins = additional content found at the end of the programme - they are not part of the main programme. They will be used by localisation companies to edit into the main programme, such as textless elements that have no captions so that they can put new captions in another language.</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </p>
+                  <div class="troubleshootingopen">
+                    <h5 style="padding-top: 30px;" class="troubleshootingheader">Troubleshooting tips:</h5>
+                    <table width="100%" cellpadding="2" class="table table-condensed table-bordered">
+                      <tr>
+                        <th class="troubleshooting" width="180px">Problem</th>
+                        <th class="troubleshooting">Solution</th>
+                      </tr>
+                      <tr>
+                        <td class="troubleshooting">When to log End of Programme</td>
+                        <td class="troubleshooting">End of Programme represents the end of the show. So if the screen goes black for ad-breaks, or there is a fade to black halfway through the show, it is not logged as black screen as it is not the end of the show. If the screen goes black after the credits and end card, then it is logged as End of Programme, as this <em>is</em> the end of the programme.</td>
+                      </tr>
+                      <tr>
+                        <td class="troubleshooting">End of programme does not match the job slip duration</td>
+                        <td class="troubleshooting">The duration on the job slip should match up with the running time when end of the programme appears (not the end of the media file). If the duration of the programme does not match the duration quoted on the job slip, an issue report must be submitted.</td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="card" id="si-Visual-EpisodeTitle" primarysort="2" secondarysort="Content_Label">
+                <h5 class="alert alert-warning">
+                  <a data-toggle="collapse" data-target="#si-EpisodeTitle" href="javascript:void(0);">
+                    <span class="badge role-icon badge-warning">Content Label</span>
+                    <span>Episode Title</span>
+                  </a>
+                </h5>
+                <div id="si-EpisodeTitle" class="card-body card-normal collapse">
+                  <p>
+                    <table width="100%" cellpadding="2" class="table table-condensed table-bordered">
+                      <th colspan="2">Job Spec</th>
+                      <tr>
+                        <th class="" width="180px">Description</th>
+                        <td>
+                          <p>The name of the Episode when transcribing a series.</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th class="">How To Identify</th>
+                        <td><p>The name of the episode appears onscreen. Note that this is only applicable for TV series - films do not have episode names.</p><p>There is a distinct difference between an episode title and the main title. The main title is the name of the production. Note that in TV, each season might have its own name - these are <strong>not</strong> episode titles. Instead, <strong>episode titles are individual names for each episode</strong>.</p><p> For example: a David Attenborough documentary called Planet Earth ran for two seasons. The first season's main title was Planet Earth, and the second season's main title was Planet Earth II. Each episode had its own individual title, such as Islands, Mountains, Jungles, etc. These individual titles are Episode Titles and should be logged each time they appear onscreen.</p><p/><h1>Examples</h1><ul><li>Friends: The One Where Ross and Rachel Take a Break</li><li>The Simpsons: Treehouse of Horror IV</li><li>Only Fools and Horses: Heroes and Villains</li></ul><p/><h1>Tips</h1><strong>TIP:</strong> Episode Titles are often found near the opening credits, as part of the title sequence, or at the very start of the show.<p><strong>TIP:</strong> Note that some TV shows might have more than one episode per transcript and thus have two different Episode Titles per script. This is common in kids TV programmes where the stories are shorter to keep their viewer's attention. Both Episode Titles should be logged.</p><p><strong>NOTE:</strong> An Episode Title may appear alongside the Main Title. When this happens, the Episode Title is logged separately to the Main Title with their own Visual Events.</p><p><strong>NOTE:</strong> Episode titles are mentioned in the clock screen before the start of the programme. This should not be logged as an episode title, but instead just included as part of the clock screen visual event.</p><p><strong>IMPORTANT:</strong> Not to be confused with the name of the entire series. The episode title is a sub heading for a specific episode from a wider series. </p></td>
+                      </tr>
+                    </table>
+                  </p>
+                </div>
+              </div>
+              <div class="card" id="si-Visual-EstablishingShot" primarysort="2" secondarysort="Content_Label">
+                <h5 class="alert alert-warning">
+                  <a data-toggle="collapse" data-target="#si-EstablishingShot" href="javascript:void(0);">
+                    <span class="badge role-icon badge-warning">Content Label</span>
+                    <span>Establishing Shot</span>
+                  </a>
+                </h5>
+                <div id="si-EstablishingShot" class="card-body card-normal collapse">
+                  <p>
+                    <table width="100%" cellpadding="2" class="table table-condensed table-bordered">
+                      <th colspan="2">Job Spec</th>
+                      <tr>
+                        <th class="" width="180px">Description</th>
+                        <td>
+                          <p>Shots that introduce a new subject.</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th class="">How To Identify</th>
+                        <td>
+                          <p>An establishing shot introduces a new character, location or object to establish a new scene. This type of shot is usually used to set the scene so that the viewers don't get confused about who, what or where a new scene is focusing on.</p>
+                          <p> A good example would be a property show, where they might show a few shots of a house for the first time.  Another good example would be a shot of a house at night before showing the interior - this establishes that the scene is at night despite the remainder of the scene being indoors. </p>
+                        </td>
+                      </tr>
+                    </table>
+                  </p>
+                </div>
+              </div>
+              <div class="card" id="si-Visual-GraphicMontage" primarysort="2" secondarysort="Content_Label">
+                <h5 class="alert alert-warning">
+                  <a data-toggle="collapse" data-target="#si-GraphicMontage" href="javascript:void(0);">
+                    <span class="badge role-icon badge-warning">Content Label</span>
+                    <span>Graphic Montage</span>
+                  </a>
+                </h5>
+                <div id="si-GraphicMontage" class="card-body card-normal collapse">
+                  <p>
+                    <table width="100%" cellpadding="2" class="table table-condensed table-bordered">
+                      <th colspan="2">Job Spec</th>
+                      <tr>
+                        <th class="" width="180px">Description</th>
+                        <td>
+                          <p>Multiple un-sequential full-screen graphics around a similar theme.</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th class="">How To Identify</th>
+                        <td>
+                          <p>A Graphic Montage consists of multiple full-screen graphics that are centred on a similar theme (similar to how a normal montage shot type works). Graphic Montages are un-sequential, in that whilst they portray a subject of a similar theme, they do not necessarily show a timeline sequentially in chronological order.</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </p>
+                </div>
+              </div>
+              <div class="card" id="si-Visual-GraphicOverlay" primarysort="2" secondarysort="Content_Label">
+                <h5 class="alert alert-warning">
+                  <a data-toggle="collapse" data-target="#si-GraphicOverlay" href="javascript:void(0);">
+                    <span class="badge role-icon badge-warning">Content Label</span>
+                    <span>Graphic Overlay</span>
+                  </a>
+                </h5>
+                <div id="si-GraphicOverlay" class="card-body card-normal collapse">
+                  <p>
+                    <table width="100%" cellpadding="2" class="table table-condensed table-bordered">
+                      <th colspan="2">Job Spec</th>
+                      <tr>
+                        <th class="" width="180px">Description</th>
+                        <td>
+                          <p>A computer-generated graphic overlaid video footage.</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th class="">How To Identify</th>
+                        <td>
+                          <p>If a computer-generated graphic is placed atop video footage, it is known as a graphic overlay. Note that the shot it overlays still needs to be logged as a separate shot with its own timecode.</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </p>
+                </div>
+              </div>
+              <div class="card" id="si-Visual-GraphicSequence" primarysort="2" secondarysort="Content_Label">
+                <h5 class="alert alert-warning">
+                  <a data-toggle="collapse" data-target="#si-GraphicSequence" href="javascript:void(0);">
+                    <span class="badge role-icon badge-warning">Content Label</span>
+                    <span>Graphic Sequence</span>
+                  </a>
+                </h5>
+                <div id="si-GraphicSequence" class="card-body card-normal collapse">
+                  <p>
+                    <table width="100%" cellpadding="2" class="table table-condensed table-bordered">
+                      <th colspan="2">Job Spec</th>
+                      <tr>
+                        <th class="" width="180px">Description</th>
+                        <td>
+                          <p>A full-screen computerised graphic.</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th class="">How To Identify</th>
+                        <td>
+                          <p>A full-screen computer generated image (CGI) is a graphic sequence. Often the graphic sequence is animated and involves moving images.</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </p>
+                </div>
+              </div>
+              <div class="card" id="si-Visual-GraphicText" primarysort="2" secondarysort="Content_Label">
+                <h5 class="alert alert-warning">
+                  <a data-toggle="collapse" data-target="#si-GraphicText" href="javascript:void(0);">
+                    <span class="badge role-icon badge-warning">Content Label</span>
+                    <span>Graphic Text</span>
+                  </a>
+                </h5>
+                <div id="si-GraphicText" class="card-body card-normal collapse">
+                  <p>
+                    <table width="100%" cellpadding="2" class="table table-condensed table-bordered">
+                      <th colspan="2">Job Spec</th>
+                      <tr>
+                        <th class="" width="180px">Description</th>
+                        <td>
+                          <p>A multiple / developing graphical text event that has been added as an overlay to the original footage.</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th class="">How To Identify</th>
+                        <td>
+                          <p>A graphic text event is usually made up of multiple graphical text entries, and is usually more complex than a simple caption. Here is a checklist that will help decide if the text on screen is is Graphics Text:</p>
+                          <ol type="1">
+                            <li>Does the visual event have text?</li>
+                            <li>Does the text in the visual event 'develop'?</li>
+                          </ol>
+                          <p>If the answer to both is 'yes', then it is probably Graphic Text.</p>
+                          <p>Here are a few examples of Graphic Text:</p>
+                          <ul>
+                            <li>A countdown timer is Graphic Text. The numbers counting down indicate a change of time. This text is 'developing'.</li>
+                            <li>A bidding counter at an auction is Graphic Text. The money counting up indicates a change in the bidding amount. This text is 'developing'.</li>
+                            <li>A map <em>might</em> contain Graphics Text, but it depends on how the text <strong>develops</strong>:<ul>	<li>If there are only a few locations labelled on the map, then it can probably be typed out in full as a <strong>Caption</strong>.</li><li>If the map develops to move from one location to another, or there are lots of location names popping up on the map, then the text on the map probably needs to be described in a Graphi Text visual event. This is because the text is 'developing' and needs more than just the locations to be copy typed.</li></ul></li>
+                            <li>A scientific diagram <em>might</em> be Graphic Text, but it depends on how the text <strong>develops</strong>:<ul><li>If there is a very complicated diagram of a space station, but just a single piece of text indicating that this is a 'space station', then this is a <strong>Caption</strong>.</li><li>If this very same diagram contains lots of text explaining all the sections of the space station, and it is appearing so quickly that it is hard to keep up, then it probably needs to be logged as <strong>Graphic Text</strong>. Again, this text is 'developing'.</li>	</ul></li>
+                          </ul>
+                        </td>
+                      </tr>
+
+                    </table>
+                  </p>
+                  <div class="troubleshootingopen">
+                    <h5 style="padding-top: 30px;" class="troubleshootingheader">Troubleshooting tips:</h5>
+                    <table width="100%" cellpadding="2" class="table table-condensed table-bordered">
+                      <tr>
+                        <th class="troubleshooting" width="180px">Problem</th>
+                        <th class="troubleshooting">Solution</th>
+                      </tr>
+                      <tr>
+                        <td class="troubleshooting">Onscreen text is illegible</td>
+                        <td class="troubleshooting">Sometimes the quality of a media file will be poor and onscreen text will be illegible. Illegible text is logged with an illegible marker, making a blind guess as to what the text says is not permitted. There are some steps that may resolve the problem:<ul><li>1. Resizing the media player window can improve the legibility of a media file.</li><li>2.Submitting an illegible text issue report can result in a higher quality media file being delivered. Whilst waiting for the new media file, transcriptions is resumed and illegible text is logged with a marker. If a replacement media file arrives, the illegible markers are replaced with the now legible text.</li><li>If a source script is provided, it may reveal what the text says. Usually the illegible text can be compared to the source script and an educated can be made.</li></ul></td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="card" id="si-Visual-Inset" primarysort="2" secondarysort="Content_Label">
+                <h5 class="alert alert-warning">
+                  <a data-toggle="collapse" data-target="#si-Inset" href="javascript:void(0);">
+                    <span class="badge role-icon badge-warning">Content Label</span>
+                    <span>Inset</span>
+                  </a>
+                </h5>
+                <div id="si-Inset" class="card-body card-normal collapse">
+                  <p>
+                    <table width="100%" cellpadding="2" class="table table-condensed table-bordered">
+                      <th colspan="2">Job Spec</th>
+                      <tr>
+                        <th class="" width="180px">Description</th>
+                        <td>
+                          <p>A windowed shot placed as an overlay atop another shot.</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th class="">How To Identify</th>
+                        <td>
+                          <p>Inset is when there are two or more sections are onscreen to show different footage at the same time. Unlike Split Screen, Inset is when a smaller windowed shot appears on top of the main shot. Note that the showt beneath the inset should be logged with its own timecode and shot type.</p>
+                          <p>Inset is often used to show people's reactions to the main shot in a smaller windowed shot - just like in Blind Date.</p>
+                          <p>
+                            <font color="red">NOTE: Not to be confused with Split screen.</font>
+                          </p>
+                        </td>
+                      </tr>
+                    </table>
+                  </p>
+                </div>
+              </div>
+              <div class="card" id="si-Visual-Interview" primarysort="2" secondarysort="Content_Label">
+                <h5 class="alert alert-warning">
+                  <a data-toggle="collapse" data-target="#si-Interview" href="javascript:void(0);">
+                    <span class="badge role-icon badge-warning">Content Label</span>
+                    <span>Interview</span>
+                  </a>
+                </h5>
+                <div id="si-Interview" class="card-body card-normal collapse">
+                  <p>
+                    <table width="100%" cellpadding="2" class="table table-condensed table-bordered">
+                      <th colspan="2">Job Spec</th>
+                      <tr>
+                        <th class="" width="180px">Description</th>
+                        <td>
+                          <p>An interview with someone where the interviewer is offscreen.</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th class="">How To Identify</th>
+                        <td>
+                          <p>An interview with someone who is responding to questions to an off-screen interviewer. The interviewer's questions may have been edited out of the final programme.</p>
+                          <p>
+                            <font color="red"> NOTE: Not to be confused with PTC.</font>
+                          </p>
+                          <p>TIP: You might not hear the interviewer. This is because they edit the show to remove the questions. For that reason, look at where the contributor is looking to decide whether you are dealing with PTC or INTERVIEW. If they are looking at the camera, it is PTC, if they are looking just to the left or right of the camera, it is probably an interview.</p>
+                          <p>TIP: when logging interview, look out for captions with the interviewee's name/occupation.</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </p>
+                </div>
+              </div>
+              <div class="card" id="si-Visual-MainTitle" primarysort="2" secondarysort="Content_Label">
+                <h5 class="alert alert-warning">
+                  <a data-toggle="collapse" data-target="#si-MainTitle" href="javascript:void(0);">
+                    <span class="badge role-icon badge-warning">Content Label</span>
+                    <span>Main Title</span>
+                  </a>
+                </h5>
+                <div id="si-MainTitle" class="card-body card-normal collapse">
+                  <p>
+                    <table width="100%" cellpadding="2" class="table table-condensed table-bordered">
+                      <th colspan="2">Job Spec</th>
+                      <tr>
+                        <th class="" width="180px">Description</th>
+                        <td>
+                          <p>The name of the production (film name or series name).</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th class="">How To Identify</th>
+                        <td><p>The name of the production appears onscreen. If you are working on a film, then it is the name of the film. If you are working on a series, it is the name of the series.</p><p/><h1>Examples:</h1><p/><h3>Films</h3><ul><li>Dirty Dancing</li><li>Scream 2</li><li>Jumanji: Welcome to the Jungle</li><li>Star Wars: Episode VIII - The Last Jedi</li></ul><p/><h3>TV Series</h3><ul><li>Friends</li><li>Eastenders</li><li>Match of the Day</li><li>Planet Earth II</li><li>Queer Eye: We're in Japan!</li></ul><p/><h1>Other notes</h1>The Main Title often appears near the start of a programme, often as part of the title sequence. If there are ad-breaks, the main title is often show before and after the break.<p>Main Titles can also appear alongside Captions. When this happens, the Main Title is logged <strong>separately</strong> to the Caption.</p><p><strong>IMPORTANT:</strong> If you are transcribing a series, this event should not to be confused with the name of the episode.</p><p><strong>IMPORTANT:</strong> If you are transcribing a film, the sequel's name is usually part of the main title. Note that the sequel's name is <strong>not</strong> considered an 'Episode Title'.</p></td>
+                      </tr>
+                    </table>
+                  </p>
+                </div>
+              </div>
+              <div class="card" id="si-Visual-Montage" primarysort="2" secondarysort="Content_Label">
+                <h5 class="alert alert-warning">
+                  <a data-toggle="collapse" data-target="#si-Montage" href="javascript:void(0);">
+                    <span class="badge role-icon badge-warning">Content Label</span>
+                    <span>Montage</span>
+                  </a>
+                </h5>
+                <div id="si-Montage" class="card-body card-normal collapse">
+                  <p>
+                    <table width="100%" cellpadding="2" class="table table-condensed table-bordered">
+                      <th colspan="2">Job Spec</th>
+                      <tr>
+                        <th class="" width="180px">Description</th>
+                        <td>
+                          <p>A collection of shots that cover the same theme.</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th class="">How To Identify</th>
+                        <td>
+                          <p>Montage shots are a group of shots that can be linked by their content theme, but are not necessarily portrayed sequentially. Montage shots are often used (but not limited) to the introduction of a new location/character; to depict a journey; or to show a selection of similar objects / people / locations.</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </p>
+                </div>
+              </div>
+              <div class="card" id="si-Visual-OnboardShot" primarysort="2" secondarysort="Content_Label">
+                <h5 class="alert alert-warning">
+                  <a data-toggle="collapse" data-target="#si-OnboardShot" href="javascript:void(0);">
+                    <span class="badge role-icon badge-warning">Content Label</span>
+                    <span>On-board Shot</span>
+                  </a>
+                </h5>
+                <div id="si-OnboardShot" class="card-body card-normal collapse">
+                  <p>
+                    <table width="100%" cellpadding="2" class="table table-condensed table-bordered">
+                      <th colspan="2">Job Spec</th>
+                      <tr>
+                        <th class="" width="180px">Description</th>
+                        <td>
+                          <p>A shot taken from on-board a moving vehicle</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th class="">How To Identify</th>
+                        <td><p>This shot will be taken from on-board a moving vehicle such as a car / train / boat etc. It is often used to help depict a journey.</p> </td>
+                      </tr>
+                    </table>
+                  </p>
+                </div>
+              </div>
+              <div class="card" id="si-Visual-OpeningCredits" primarysort="2" secondarysort="Content_Label">
+                <h5 class="alert alert-warning">
+                  <a data-toggle="collapse" data-target="#si-OpeningCredits" href="javascript:void(0);">
+                    <span class="badge role-icon badge-warning">Content Label</span>
+                    <span>Opening Credits</span>
+                  </a>
+                </h5>
+                <div id="si-OpeningCredits" class="card-body card-normal collapse">
+                  <p>
+                    <table width="100%" cellpadding="2" class="table table-condensed table-bordered">
+                      <th colspan="2">Job Spec</th>
+                      <tr>
+                        <th class="" width="180px">Description</th>
+                        <td>
+                          <p>Opening credits are shown at the very beginning of a programme / film and list the most important members of the production.</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th class="">How To Identify</th>
+                        <td>
+                          <p>Opening credits roll at the start, either over the title sequence or the opening scenes of the programme / film. It is a list of all the most important members of the production. There may be multiple opening credits, all of which should be logged as separate opening credit events with their own timecodes (unlike end credits, which are all logged under a single timecode).</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </p>
+                  <div class="troubleshootingopen">
+                    <h5 style="padding-top: 30px;" class="troubleshootingheader">Troubleshooting tips:</h5>
+                    <table width="100%" cellpadding="2" class="table table-condensed table-bordered">
+                      <tr>
+                        <th class="troubleshooting" width="180px">Problem</th>
+                        <th class="troubleshooting">Solution</th>
+                      </tr>
+                      <tr>
+                        <td class="troubleshooting">Onscreen text is illegible</td>
+                        <td class="troubleshooting">Sometimes the quality of a media file will be poor and onscreen text will be illegible. Illegible text is logged with an illegible marker, making a blind guess as to what the text says is not permitted. There are some steps that may resolve the problem:<ul><li>1. Resizing the media player window can improve the legibility of a media file.</li><li>2.Submitting an illegible text issue report can result in a higher quality media file being delivered. Whilst waiting for the new media file, transcriptions is resumed and illegible text is logged with a marker. If a replacement media file arrives, the illegible markers are replaced with the now legible text.</li><li>If a source script is provided, it may reveal what the text says. Usually the illegible text can be compared to the source script and an educated can be made.</li></ul></td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="card" id="si-Visual-Painting" primarysort="2" secondarysort="Content_Label">
+                <h5 class="alert alert-warning">
+                  <a data-toggle="collapse" data-target="#si-Painting" href="javascript:void(0);">
+                    <span class="badge role-icon badge-warning">Content Label</span>
+                    <span>Painting</span>
+                  </a>
+                </h5>
+                <div id="si-Painting" class="card-body card-normal collapse">
+                  <p>
+                    <table width="100%" cellpadding="2" class="table table-condensed table-bordered">
+                      <th colspan="2">Job Spec</th>
+                      <tr>
+                        <th class="" width="180px">Description</th>
+                        <td>
+                          <p>A scan of a painting.</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th class="">How To Identify</th>
+                        <td>
+                          <p>A painting should be instantly recognisable. You may find that the painting moves across the screen or has been animated slightly to make it visually more interesting, but it will still be identifiable as a painting.</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </p>
+                </div>
+              </div>
+              <div class="card" id="si-Visual-PhotographicStill" primarysort="2" secondarysort="Content_Label">
+                <h5 class="alert alert-warning">
+                  <a data-toggle="collapse" data-target="#si-PhotographicStill" href="javascript:void(0);">
+                    <span class="badge role-icon badge-warning">Content Label</span>
+                    <span>Photographic Still</span>
+                  </a>
+                </h5>
+                <div id="si-PhotographicStill" class="card-body card-normal collapse">
+                  <p>
+                    <table width="100%" cellpadding="2" class="table table-condensed table-bordered">
+                      <th colspan="2">Job Spec</th>
+                      <tr>
+                        <th class="" width="180px">Description</th>
+                        <td>
+                          <p>A scan of a black and white photograph.</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th class="">How To Identify</th>
+                        <td>
+                          <p>A photographic still should be instantly recognisable. You may find that the still moves across the screen or has been animated slightly to make it visually more interesting, but it will still be identifiable as a photographic still.</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </p>
+                </div>
+              </div>
+              <div class="card" id="si-Visual-PieceToCamera" primarysort="2" secondarysort="Content_Label">
+                <h5 class="alert alert-warning">
+                  <a data-toggle="collapse" data-target="#si-PieceToCamera" href="javascript:void(0);">
+                    <span class="badge role-icon badge-warning">Content Label</span>
+                    <span>PTC</span>
+                  </a>
+                </h5>
+                <div id="si-PieceToCamera" class="card-body card-normal collapse">
+                  <p>
+                    <table width="100%" cellpadding="2" class="table table-condensed table-bordered">
+                      <th colspan="2">Job Spec</th>
+                      <tr>
+                        <th class="" width="180px">Description</th>
+                        <td>
+                          <p>PTC = Piece to Camera</p>
+                          <p>A contributor, usually the host / presenter, speaking directly to the camera.</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th class="">How To Identify</th>
+                        <td>
+                          <p>A piece to camera is when the host  / presenter speaks directly to the camera. This gives the feeling that the person is speaking directly to the viewer. Note that if a single camera shot (no edits) contains a PTC and other events, it may be more appropriate to use another shot type but to mention PTC in your description of the shot.</p>
+                          <p>
+                            <font color="red">NOTE: Not to be confused with shot type 'Interview'.</font>
+                          </p>
+                        </td>
+                      </tr>
+                    </table>
+                  </p>
+                </div>
+              </div>
+              <div class="card" id="si-Visual-PointOfViewShot" primarysort="2" secondarysort="Content_Label">
+                <h5 class="alert alert-warning">
+                  <a data-toggle="collapse" data-target="#si-PointOfViewShot" href="javascript:void(0);">
+                    <span class="badge role-icon badge-warning">Content Label</span>
+                    <span>Point of View Shot</span>
+                  </a>
+                </h5>
+                <div id="si-PointOfViewShot" class="card-body card-normal collapse">
+                  <p>
+                    <table width="100%" cellpadding="2" class="table table-condensed table-bordered">
+                      <th colspan="2">Job Spec</th>
+                      <tr>
+                        <th class="" width="180px">Description</th>
+                        <td>
+                          <p>A shot from the point of view of a person, animal or automaton.</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th class="">How To Identify</th>
+                        <td>
+                          <p>Sometimes the director wants the viewer to feel that they are perceiving the world from the POV of something. The contributor could be anything from a person, dog, robot, bee etc. This footage is usually shot at eye level of the contributor and will be shaky handheld footage to make the viewer feel as though they are perceiving the world from the contributor's point of view.</p>
+                          <p>
+                            <font color="red">NOTE: Not to be confused with on-board or aerial shot types.</font>
+                          </p>
+                        </td>
+                      </tr>
+                    </table>
+                  </p>
+                </div>
+              </div>
+              <div class="card" id="si-Visual-Recap" primarysort="2" secondarysort="Content_Label">
+                <h5 class="alert alert-warning">
+                  <a data-toggle="collapse" data-target="#si-Recap" href="javascript:void(0);">
+                    <span class="badge role-icon badge-warning">Content Label</span>
+                    <span>Recap</span>
+                  </a>
+                </h5>
+                <div id="si-Recap" class="card-body card-normal collapse">
+                  <p>
+                    <table width="100%" cellpadding="2" class="table table-condensed table-bordered">
+                      <th colspan="2">Job Spec</th>
+                      <tr>
+                        <th class="" width="180px">Description</th>
+                        <td>
+                          <p>A recap of the events that occurred earlier in the episode or in a previous episode.</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th class="">How To Identify</th>
+                        <td>
+                          <p>A recap is a section of the media that reminds the viewer what has already happened.</p>
+                          <p>This section can often be found:</p>
+                          <ul>
+                            <li>At the start of the show, recapping what happened in the previous episode.</li>
+                            <li>After an ad-break, recapping what happened before the break.</li>
+                          </ul>
+                          <p/>
+                          <div class="alert alert-danger" role="alert">NOTE: Do not confuse 'Recap' with Teaser. A teaser is always looking forwards to footage that has not yet been seen. A recap is looking backwards at footage that has happened in previous episodes or earlier in the same episode.</div>
+                        </td>
+                      </tr>
+                    </table>
+                  </p>
+                </div>
+              </div>
+              <div class="card" id="si-Visual-Sequence" primarysort="2" secondarysort="Content_Label">
+                <h5 class="alert alert-warning">
+                  <a data-toggle="collapse" data-target="#si-Sequence" href="javascript:void(0);">
+                    <span class="badge role-icon badge-warning">Content Label</span>
+                    <span>Sequence</span>
+                  </a>
+                </h5>
+                <div id="si-Sequence" class="card-body card-normal collapse">
+                  <p>
+                    <table width="100%" cellpadding="2" class="table table-condensed table-bordered">
+                      <th colspan="2">Job Spec</th>
+                      <tr>
+                        <th class="" width="180px">Description</th>
+                        <td>
+                          <p>A series of shots that cover the same action.</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th class="">How To Identify</th>
+                        <td>
+                          <p>A group of shots where an action is portrayed sequentially in chronological order. For example, multiple camera angles of someone running to work would be a sequence as the same action is portrayed sequentially.</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </p>
+                </div>
+              </div>
+              <div class="card" id="si-Visual-Shot" primarysort="2" secondarysort="Content_Label">
+                <h5 class="alert alert-warning">
+                  <a data-toggle="collapse" data-target="#si-Shot" href="javascript:void(0);">
+                    <span class="badge role-icon badge-warning">Content Label</span>
+                    <span>Shot</span>
+                  </a>
+                </h5>
+                <div id="si-Shot" class="card-body card-normal collapse">
+                  <p>
+                    <table width="100%" cellpadding="2" class="table table-condensed table-bordered">
+                      <th colspan="2">Job Spec</th>
+                      <tr>
+                        <th class="" width="180px">Description</th>
+                        <td>
+                          <p>A single shot.</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th class="">How To Identify</th>
+                        <td>
+                          <p>This is a single camera footage shot of an object, location, person etc.</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </p>
+                </div>
+              </div>
+              <div class="card" id="si-Visual-SlowMotion" primarysort="2" secondarysort="Content_Label">
+                <h5 class="alert alert-warning">
+                  <a data-toggle="collapse" data-target="#si-SlowMotion" href="javascript:void(0);">
+                    <span class="badge role-icon badge-warning">Content Label</span>
+                    <span>Slow Motion</span>
+                  </a>
+                </h5>
+                <div id="si-SlowMotion" class="card-body card-normal collapse">
+                  <p>
+                    <table width="100%" cellpadding="2" class="table table-condensed table-bordered">
+                      <th colspan="2">Job Spec</th>
+                      <tr>
+                        <th class="" width="180px">Description</th>
+                        <td>
+                          <p>A shot shown in slow motion.</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th class="">How To Identify</th>
+                        <td>
+                          <p>A shot of something shown in slow motion. Often used to show fast moving subjects like a bullet being fired, a cheetah sprinting, a balloon bursting etc.</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </p>
+                </div>
+              </div>
+              <div class="card" id="si-Visual-SplitScreen" primarysort="2" secondarysort="Content_Label">
+                <h5 class="alert alert-warning">
+                  <a data-toggle="collapse" data-target="#si-SplitScreen" href="javascript:void(0);">
+                    <span class="badge role-icon badge-warning">Content Label</span>
+                    <span>Split Screen</span>
+                  </a>
+                </h5>
+                <div id="si-SplitScreen" class="card-body card-normal collapse">
+                  <p>
+                    <table width="100%" cellpadding="2" class="table table-condensed table-bordered">
+                      <th colspan="2">Job Spec</th>
+                      <tr>
+                        <th class="" width="180px">Description</th>
+                        <td>
+                          <p>A screen split into different sections to show multiple shots at the same time.</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th class="">How To Identify</th>
+                        <td>
+                          <p>The screen is divided into two or more sections to show different footage at the same time. Split screen is used to display multiple streams onscreen simultaneously. The screen is often divided into equal sections (halves, thirds, quarters etc). For example, a news channel may split the screen in half when interviewing multiple people over satellite linkup. </p>
+                          <p>
+                            <font color="red">NOTE: Not to be confused with Inset.</font>
+                          </p>
+                        </td>
+                      </tr>
+                    </table>
+                  </p>
+                </div>
+              </div>
+              <div class="card" id="si-Visual-Teaser" primarysort="2" secondarysort="Content_Label">
+                <h5 class="alert alert-warning">
+                  <a data-toggle="collapse" data-target="#si-Teaser" href="javascript:void(0);">
+                    <span class="badge role-icon badge-warning">Content Label</span>
+                    <span>Teaser</span>
+                  </a>
+                </h5>
+                <div id="si-Teaser" class="card-body card-normal collapse">
+                  <p>
+                    <table width="100%" cellpadding="2" class="table table-condensed table-bordered">
+                      <th colspan="2">Job Spec</th>
+                      <tr>
+                        <th class="" width="180px">Description</th>
+                        <td>
+                          <p>A teaser shows the viewer what is 'coming up' in this episode or the next episode.</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th class="">How To Identify</th>
+                        <td>
+                          <p>A teaser is a section of the media that teases footage that is 'coming up' to the viewer. </p>
+                          <p>This section can often be found:</p>
+                          <ul>
+                            <li>At the start of the show, teasing what will happen in this episode.</li>
+                            <li>Before an ad-break, teasing what will happen after the break.</li>
+                            <li>At the end of an episode, teasing what will happen in the next episode.</li>
+                          </ul>
+                          <p/>
+                          <div class="alert alert-danger" role="alert">NOTE: Do not confuse 'Teaser' with Recap. A recap is looking backwards at footage that has happened in previous episodes or earlier in the same episode. A teaser is always looking forwards to footage that has not yet been seen.</div>
+                        </td>
+                      </tr>
+                    </table>
+                  </p>
+                </div>
+              </div>
+              <div class="card" id="si-Visual-TimeLapse" primarysort="2" secondarysort="Content_Label">
+                <h5 class="alert alert-warning">
+                  <a data-toggle="collapse" data-target="#si-TimeLapse" href="javascript:void(0);">
+                    <span class="badge role-icon badge-warning">Content Label</span>
+                    <span>Time Lapse</span>
+                  </a>
+                </h5>
+                <div id="si-TimeLapse" class="card-body card-normal collapse">
+                  <p>
+                    <table width="100%" cellpadding="2" class="table table-condensed table-bordered">
+                      <th colspan="2">Job Spec</th>
+                      <tr>
+                        <th class="" width="180px">Description</th>
+                        <td>
+                          <p>Sped up shots.</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th class="">How To Identify</th>
+                        <td>
+                          <p>A time lapse shot will appear to be in 'fast forward' mode, showing sped up footage. Time lapses are frequently used to show sunsets, busy traffic, flowers in bloom, etc sped up so that the slow moving action appears to be faster. They are also used to show night turning to day and vice versa to indicate to the viewer that a new day has started in the narrative.</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </p>
+                </div>
+              </div>
+              <div class="card" id="si-Visual-TitleCard" primarysort="2" secondarysort="Content_Label">
+                <h5 class="alert alert-warning">
+                  <a data-toggle="collapse" data-target="#si-TitleCard" href="javascript:void(0);">
+                    <span class="badge role-icon badge-warning">Content Label</span>
+                    <span>Title Card</span>
+                  </a>
+                </h5>
+                <div id="si-TitleCard" class="card-body card-normal collapse">
+                  <p>
+                    <table width="100%" cellpadding="2" class="table table-condensed table-bordered">
+                      <th colspan="2">Job Spec</th>
+                      <tr>
+                        <th class="" width="180px">Description</th>
+                        <td>
+                          <p>Title card is a logo used by movie studios and television production companies to brand what they produce.</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th class="">How To Identify</th>
+                        <td>
+                          <p>Title cards show the production / distribution company logos fullscreen at the start of a programme or film. These should not be confused with end cards which appear at the end of the programme / film.</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </p>
+                  <div class="troubleshootingopen">
+                    <h5 style="padding-top: 30px;" class="troubleshootingheader">Troubleshooting tips:</h5>
+                    <table width="100%" cellpadding="2" class="table table-condensed table-bordered">
+                      <tr>
+                        <th class="troubleshooting" width="180px">Problem</th>
+                        <th class="troubleshooting">Solution</th>
+                      </tr>
+                      <tr>
+                        <td class="troubleshooting">Onscreen text is illegible</td>
+                        <td class="troubleshooting">Sometimes the quality of a media file will be poor and onscreen text will be illegible. Illegible text is logged with an illegible marker, making a blind guess as to what the text says is not permitted. There are some steps that may resolve the problem:<ul><li>1. Resizing the media player window can improve the legibility of a media file.</li><li>2.Submitting an illegible text issue report can result in a higher quality media file being delivered. Whilst waiting for the new media file, transcriptions is resumed and illegible text is logged with a marker. If a replacement media file arrives, the illegible markers are replaced with the now legible text.</li><li>If a source script is provided, it may reveal what the text says. Usually the illegible text can be compared to the source script and an educated can be made.</li></ul></td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="card" id="si-Visual-TitleSequence" primarysort="2" secondarysort="Content_Label">
+                <h5 class="alert alert-warning">
+                  <a data-toggle="collapse" data-target="#si-TitleSequence" href="javascript:void(0);">
+                    <span class="badge role-icon badge-warning">Content Label</span>
+                    <span>Title Sequence</span>
+                  </a>
+                </h5>
+                <div id="si-TitleSequence" class="card-body card-normal collapse">
+                  <p>
+                    <table width="100%" cellpadding="2" class="table table-condensed table-bordered">
+                      <th colspan="2">Job Spec</th>
+                      <tr>
+                        <th class="" width="180px">Description</th>
+                        <td>
+                          <p>A title sequence is the method by which films or television programmes present their title, key production and cast members, or both, utilizing conceptual visuals and sound.</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th class="">How To Identify</th>
+                        <td>
+                          <p>Every show has a title sequence. Whether it is a few seconds or a minute long, the title sequence is a series of graphics or clips that lead up to the title of the show. You are probably familiar with a few famous title sequences, such as the openings to Eastenders, Coronation Street, BBC News, Match of the Day and Who Wants to be a Millionaire? All of which have a famous soundtrack and series of shots that lead up to the title of the show. Many shows use this opportunity to introduce cast members or locations that appear in the programme.</p>
+                          <p>Not all title sequences will contain clips. They may just have a few graphics with the title of the show appearing.</p>
+                          <p/>
+                          <h2>Tips:</h2>
+                          <ul>
+                            <li>Only one title sequence needs to be logged per episode.</li>
+                            <li> The title sequence will always occur before the first ad break.</li>
+                            <li>The title sequence will be the same for every episode. This means that recap and teaser sections are not considered part of the title sequence.</li>
+                            <li>Unless you have been instructed otherwise, the dialogue during a title sequence should be transcribed.</li>
+                            <li>If you have been asked to transcribe opening credits, you should include opening credits that occur during title sequences by logging them in their own visual event(s).</li>
+                            <li>If you have been asked to transcribe captions, you should <strong>ignore</strong> captions that occur during the title sequence unless instructed otherwise.</li>
+                          </ul>
+                        </td>
+                      </tr>
+                    </table>
+                  </p>
+                </div>
+              </div>
+              <div class="card" id="si-Visual-Censored" primarysort="2" secondarysort="Marker:_Censorship">
+                <h5 class="alert alert-primary">
+                  <a data-toggle="collapse" data-target="#si-Censored" href="javascript:void(0);">
+                    <span class="badge role-icon badge-primary">Marker: Censorship</span>
+					<span class="badge role-icon badge-secondary"style="margin-right:10px;">Short Form: [CE</span>
+                    <span>CENSORED</span>
+                  </a>
+                </h5>
+                <div id="si-Censored" class="card-body card-normal collapse">
+                  <p>
+                    <table width="100%" cellpadding="2" class="table table-condensed table-bordered">
+                      <th colspan="2">Job Spec</th>
+                      <tr>
+                        <th class="" width="180px">Description</th>
+                        <td>
+                          <p>On-screen text that has been censored.</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th class="">How To Identify</th>
+                        <td>
+                          <p>There is a section of on-screen text that has been intentionally obscured so that the viewer cannot read it.</p>
+                          <p>The most common reason for censorship is to hide profanties from the audience, but there can be other scenarios where text is intentionally obscured from the viewer (spy shows, word gameshows, etc.)</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </p>
+                </div>
+              </div>
+              <div class="card" id="si-Visual-Illegible" primarysort="2" secondarysort="Marker:_Unknown">
+                <h5 class="alert alert-primary">
+                  <a data-toggle="collapse" data-target="#si-Illegible" href="javascript:void(0);">
+                    <span class="badge role-icon badge-primary">Marker: Unknown</span>
+					<span class="badge role-icon badge-secondary"style="margin-right:10px;">Short Form: [IL</span>
+                    <span>ILLEGIBLE</span>
+                  </a>
+                </h5>
+                <div id="si-Illegible" class="card-body card-normal collapse">
+                  <p>
+                    <table width="100%" cellpadding="2" class="table table-condensed table-bordered">
+                      <th colspan="2">Job Spec</th>
+                      <tr>
+                        <th class="" width="180px">Description</th>
+                        <td>
+                          <p>Not clear enough to be read.</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th class="">How To Identify</th>
+                        <td>
+                          <p>Text onscreen that is not clear enough to be read.</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </p>
+                  <div class="troubleshootingopen">
+                    <h5 style="padding-top: 30px;" class="troubleshootingheader">Troubleshooting tips:</h5>
+                    <table width="100%" cellpadding="2" class="table table-condensed table-bordered">
+                      <tr>
+                        <th class="troubleshooting" width="180px">Problem</th>
+                        <th class="troubleshooting">Solution</th>
+                      </tr>
+                      <tr>
+                        <td class="troubleshooting">Onscreen text is illegible</td>
+                        <td class="troubleshooting">Sometimes the quality of a media file will be poor and onscreen text will be illegible. Illegible text is logged with an illegible marker, making a blind guess as to what the text says is not permitted. There are some steps that may resolve the problem:<ul><li>1. Resizing the media player window can improve the legibility of a media file.</li><li>2.Submitting an illegible text issue report can result in a higher quality media file being delivered. Whilst waiting for the new media file, transcriptions is resumed and illegible text is logged with a marker. If a replacement media file arrives, the illegible markers are replaced with the now legible text.</li><li>If a source script is provided, it may reveal what the text says. Usually the illegible text can be compared to the source script and an educated can be made.</li></ul></td>
+                      </tr>
+                      <tr>
+                        <td class="troubleshooting">Onscreen text is illegible and notify</td>
+                        <td class="troubleshooting">Sometimes the quality of a media file will be poor and onscreen text will be illegible. Illegible text is logged with an illegible marker, making a blind guess as to what the text says is not permitted. There are some steps that may resolve the problem:<ul><li>1. Resizing the media player window can improve the legibility of a media file.</li><li>2.Submitting an illegible text issue report can result in a higher quality media file being delivered. Whilst waiting for the new media file, transcriptions is resumed and illegible text is logged with a marker. If a replacement media file arrives, the illegible markers are replaced with the now legible text.</li><li>If a source script is provided, it may reveal what the text says. Usually the illegible text can be compared to the source script and an educated can be made.</li></ul>When uploading a script, the illegible/s must be communicated in the note.</td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="card" id="si-Visual-ObscuredByTimecode" primarysort="2" secondarysort="Marker:_Unknown">
+                <h5 class="alert alert-primary">
+                  <a data-toggle="collapse" data-target="#si-ObscuredByTimecode" href="javascript:void(0);">
+                    <span class="badge role-icon badge-primary">Marker: Unknown</span>
+					<span class="badge role-icon badge-secondary"style="margin-right:10px;">Short Form: [OB</span>
+                    <span>OBSCURED BY TIMECODE</span>
+                  </a>
+                </h5>
+                <div id="si-ObscuredByTimecode" class="card-body card-normal collapse">
+                  <p>
+                    <table width="100%" cellpadding="2" class="table table-condensed table-bordered">
+                      <th colspan="2">Job Spec</th>
+                      <tr>
+                        <th class="" width="180px">Description</th>
+                        <td>
+                          <p>Onscreen&#160;graphics obscured by timecode or any other media artefact meaning it&#160;cannot be read.</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th class="">How To Identify</th>
+                        <td>
+                          <p>Onscreen&#160;graphics have been obscured by timecode or any other media artefact and cannot be read.</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </p>
+                </div>
+              </div>
+              <div class="card" id="si-Visual-Sic" primarysort="2" secondarysort="Marker:_Unknown">
+                <h5 class="alert alert-primary">
+                  <a data-toggle="collapse" data-target="#si-Sic" href="javascript:void(0);">
+                    <span class="badge role-icon badge-primary">Marker: Unknown</span>
+					<span class="badge role-icon badge-secondary"style="margin-right:10px;">Short Form: [SIC</span>
+                    <span>SIC</span>
+                  </a>
+                </h5>
+                <div id="si-Sic" class="card-body card-normal collapse">
+                  <p>
+                    <table width="100%" cellpadding="2" class="table table-condensed table-bordered">
+                      <th colspan="2">Job Spec</th>
+                      <tr>
+                        <th class="" width="180px">Description</th>
+                        <td>
+                          <p>The Latin adverb sic ("thus was it written") inserted immediately after a quoted word or passage. This indicates that the quoted matter has been transcribed exactly as found in the source text, complete with any erroneous or archaic spelling, surprising assertion, faulty reasoning, or other matter that might otherwise be taken as an error of transcription.</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th class="">How To Identify</th>
+                        <td>
+                          <p>Content which has been transcribed exactly as found in the media, but which is noted as incorrect or inaccurate.</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </p>
+                </div>
+              </div>
+              <div class="card" id="si-Visual-Cutwithpreviousshot" primarysort="2" secondarysort="Style_Guide">
+                <h5 class="alert alert-success">
+                  <a data-toggle="collapse" data-target="#si-Cutwithpreviousshot" href="javascript:void(0);">
+                    <span class="badge role-icon badge-success">Style Guide</span>
+                    <span>Cut with previous shot</span>
+                  </a>
+                </h5>
+                <div id="si-Cutwithpreviousshot" class="card-body card-normal collapse">
+                  <p>
+                    <table width="100%" cellpadding="2" class="table table-condensed table-bordered">
+                      <th colspan="2">Job Spec</th>
+                      <tr>
+                        <td>
+                          <p>If there are two themes of shots going back and forth, it is possible to use the Cut With Previous shotcut <strong>(F2)</strong>. Often there will be one theme of sequential shots that is cut with another theme of shots. Often, it is used when there is sequential footage of people talking about a subject, combined (cut with) with footage of said subject. This tool should prevent the need to log two alternating shot descriptions over and over.</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </p>
+                </div>
+              </div>
+              <div class="card" id="si-Visual-Describewhatyousee" primarysort="2" secondarysort="Style_Guide">
+                <h5 class="alert alert-success">
+                  <a data-toggle="collapse" data-target="#si-Describewhatyousee" href="javascript:void(0);">
+                    <span class="badge role-icon badge-success">Style Guide</span>
+                    <span>Describe what you see</span>
+                  </a>
+                </h5>
+                <div id="si-Describewhatyousee" class="card-body card-normal collapse">
+                  <p>
+                    <table width="100%" cellpadding="2" class="table table-condensed table-bordered">
+                      <th colspan="2">Job Spec</th>
+                      <tr>
+                        <td>
+                          <p>The aim is to log what is happening onscreen and not to log what is being said. Descriptions should consist of what can be seen, not what can be heard. For example, avoid logs like: </p>
+                          <p><strong>SHOT:</strong> Jamie Oliver talking about how bread rises whilst he kneads dough.</p>
+                          <p>Instead, the descriptions should log what can be seen:</p>
+                          <p><strong>SHOT:</strong> Jamie Oliver talking whilst kneading dough.</p>
+                          <p>NOTE: Programmes like chat shows, comedy stand-up, and concerts do not have a lot of shot variations. For that reason, this rule can be broken to give a bit of variation to the shot descriptions. Using the topics in the dialogue or the song being performed can be used to group shots. For example:</p>
+                          <p> <strong>SEQUENCE:</strong> Radiohead look sombre whilst they play the intro to 'Creep'</p>
+                          <p>Or:</p>
+                          <p><strong>SEQUENCE:</strong> Graham Norton laughing whilst talking to Lady Gaga about her choice of wardrobe.</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </p>
+                </div>
+              </div>
+              <div class="card" id="si-Visual-GroupshotsusingShotQuantity" primarysort="2" secondarysort="Style_Guide">
+                <h5 class="alert alert-success">
+                  <a data-toggle="collapse" data-target="#si-GroupshotsusingShotQuantity" href="javascript:void(0);">
+                    <span class="badge role-icon badge-success">Style Guide</span>
+                    <span>Group shots using Shot Quantity </span>
+                  </a>
+                </h5>
+                <div id="si-GroupshotsusingShotQuantity" class="card-body card-normal collapse">
+                  <p>
+                    <table width="100%" cellpadding="2" class="table table-condensed table-bordered">
+                      <th colspan="2">Job Spec</th>
+                      <tr>
+                        <td>
+                          <p>Sometimes there will be multiple shots covering exactly the same footage and therefore will have the same description. When this happens, it is possible to state that there are multiple shots using the Shot Quantity shortcut <strong>(F9)</strong>.</p>
+                          <p>It can be difficult to know if you should or shouldn't be grouping shots by quantity. Every programme is different, so the approach may need to be adapted from script to script.</p>
+                          <p>Grouping too much: When a grouping goes on for more than thirty seconds, perhaps the group should be split it up into two groups? Often a sequence or a montage will develop to help tell a story, use the developments in the subject/theme to split up the shots and provide a little more detail in the descriptions.</p>
+                          <p>It is difficult to group shots: Not every programme lends itself to grouping shots by quantity and it may be more suitable to log each shot individually.</p>
+                          <p>Again, not every programme is the same, therefore the grouping style may need to be adapted from job-to-job.</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </p>
+                </div>
+              </div>
+              <div class="card" id="si-Visual-Ignoreroughcuteditornotes" primarysort="2" secondarysort="Style_Guide">
+                <h5 class="alert alert-success">
+                  <a data-toggle="collapse" data-target="#si-Ignoreroughcuteditornotes" href="javascript:void(0);">
+                    <span class="badge role-icon badge-success">Style Guide</span>
+                    <span>Ignore rough cut editor notes</span>
+                  </a>
+                </h5>
+                <div id="si-Ignoreroughcuteditornotes" class="card-body card-normal collapse">
+                  <p>
+                    <table width="100%" cellpadding="2" class="table table-condensed table-bordered">
+                      <th colspan="2">Job Spec</th>
+                      <tr>
+                        <td>
+                          <p>Programmes that have been edited, but not finished are often called a rough cut, picture lock, or locked cut. In these early versions of the programme, text may have been added to remind the editor that they need to do something. This is not text that will be read by the actual audience of the show when the final programme is released, instead it will be removed in the final cut. For that reason, rough cut text is ignored.</p>
+                          <p>For example, text might appear saying something like: </p>
+                          <ul>
+                            <li>"VFX: Insert launch graphic here"</li>
+                            <li>Black Screen: 20secs</li>
+                            <li>"VFX: Remove tattoo from arm"</li>
+                          </ul>
+                          <p>You must ignore this text unless your job's specific notes specify otherwise.</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </p>
+                </div>
+              </div>
+              <div class="card" id="si-Visual-Namingcontributors" primarysort="2" secondarysort="Style_Guide">
+                <h5 class="alert alert-success">
+                  <a data-toggle="collapse" data-target="#si-Namingcontributors" href="javascript:void(0);">
+                    <span class="badge role-icon badge-success">Style Guide</span>
+                    <span>Naming contributors</span>
+                  </a>
+                </h5>
+                <div id="si-Namingcontributors" class="card-body card-normal collapse">
+                  <p>
+                    <table width="100%" cellpadding="2" class="table table-condensed table-bordered">
+                      <th colspan="2">Job Spec</th>
+                      <tr>
+                        <td>
+                          <h5 class="mb-1">If a source script or source material has been provided:</h5>
+                          <p>If a source script has been provided, or you have been provided a cast sheet, always use the names provided in the source material for your contributor names.</p>
+                          <h5 class="mb-1">No source material is available, try the credits:</h5>
+                          <p>If no source material is available, but there are credits at the end of the programme, then check to see if the character's name is included in the credits. If so, use this name for the contributor.</p>
+                          <h5 class="mb-1">No credits:</h5>
+                          <p>When available, a contributor's full name is used in the shot description. When a full name is not available, a circumstancial speaker name is used. Below is a list of naming conventions in order of priority:</p>
+                          <ol>
+                            <li>Full name</li>
+                            <li>Forename or Surname only</li>
+                            <li>Nickname</li>
+                            <li>Occupation and/or physical description of person using hair colour, description of clothes, facial hair and gender. E.g. Male dentist with moustache and brown hair</li>
+                            <li>Appropriate circumstancial name based on gender and location. E.g. female audience member</li>
+                            <li>If you are unable to use any of the above name formats, then please only use their gender followed by a unique number. For example: Male 1</li>
+                          </ol>
+                          <p/>
+                          <div class="alert alert-info" role="alert">Remember, if you are working on a fictional piece, use the actor's <strong>character</strong> name, rather than the their real name.</div>
+                          <p/>
+                          <div class="alert alert-danger" role="alert"><strong>IMPORTANT:</strong> Unless you are using a name found in source material or credits, it is never acceptable to use any pejorative / sensitive terms when describing contributors. We do not refer to weight or race when describing contributors. There are no excuses for this. Use sensible and contextual descriptions only.</div>
+                        </td>
+                      </tr>
+                    </table>
+                  </p>
+                </div>
+              </div>
+              <div class="card" id="si-Visual-Onlylogclockscreensthatappearbeforetheprogramme" primarysort="2" secondarysort="Style_Guide">
+                <h5 class="alert alert-success">
+                  <a data-toggle="collapse" data-target="#si-Onlylogclockscreensthatappearbeforetheprogramme" href="javascript:void(0);">
+                    <span class="badge role-icon badge-success">Style Guide</span>
+                    <span>Only log clockscreens that appear before the programme</span>
+                  </a>
+                </h5>
+                <div id="si-Onlylogclockscreensthatappearbeforetheprogramme" class="card-body card-normal collapse">
+                  <p>
+                    <table width="100%" cellpadding="2" class="table table-condensed table-bordered">
+                      <th colspan="2">Job Spec</th>
+                      <tr>
+                        <td>
+                          <p>If there are clockscreens in the media file, only log the one that appears before the start of the show. This is because the clockscreens that appear in the ad-break will cause the merging macro to break. When you have finished your merge, add the ad-break clockscreens to the script.</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </p>
+                </div>
+              </div>
+              <div class="card" id="si-Visual-Shotdescriptions" primarysort="2" secondarysort="Style_Guide">
+                <h5 class="alert alert-success">
+                  <a data-toggle="collapse" data-target="#si-Shotdescriptions" href="javascript:void(0);">
+                    <span class="badge role-icon badge-success">Style Guide</span>
+                    <span>Shot descriptions</span>
+                  </a>
+                </h5>
+                <div id="si-Shotdescriptions" class="card-body card-normal collapse">
+                  <p>
+                    <table width="100%" cellpadding="2" class="table table-condensed table-bordered">
+                      <th colspan="2">Job Spec</th>
+                      <tr>
+                        <td>
+                          <p>Shot descriptions should be succinct, but contain the focal information of the shot. Descriptions should explain the who, what, and where, so that the reader can follow the narrative the visuals are illustrating. For example, the following three shot descriptions are effective at telling the reader what is happening on screen:</p>
+                          <p><strong>SHOT:</strong> Joe Bloggs opening a birthday present.<br/><strong>CLOSE UP:</strong> Keys to a Ferrari inside a box<br/> <strong>SHOT:</strong> Joe Bloggs crying with joy whilst hugging Jane Doe.</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="tab-Grammar&amp;Punctuation" style="padding-bottom: 40px;">
+            <h3 class="cathead">Grammar &amp; Punctuation</h3>
+            <p>Any style job specs related to standard practises regarding grammar and punctuation</p>
+            <div class="catcards">
+              <div class="card" id="si-Grammar&amp;Punctuation-Apostrophes" primarysort="2" secondarysort="Style_Guide">
+                <h5 class="alert alert-success">
+                  <a data-toggle="collapse" data-target="#si-Apostrophes" href="javascript:void(0);">
+                    <span class="badge role-icon badge-success">Style Guide</span>
+                    <span>Apostrophes</span>
+                  </a>
+                </h5>
+                <div id="si-Apostrophes" class="card-body card-normal collapse">
+                  <p>
+                    <table width="100%" cellpadding="2" class="table table-condensed table-bordered">
+                      <th colspan="2">Job Spec</th>
+                      <tr>
+                        <td>
+                          <p>Apostrophes are used to show that something belongs to someone or something else. For example:</p>
+                          <ul>
+                            <li>Alice's coat (the coat belonging to Alice)</li>
+                            <li>Jack's friend (the friend belonging to Jack)</li>
+                            <li>The BBC's website (The website that belongs to the BBC)</li>
+                          </ul>
+                          <p>Add an apostrophe and an s ('s) to singular nouns and plural nouns that don't end in s, such as children and people. For example:</p>
+                          <ul>
+                            <li>the dog's dinner</li>
+                            <li>the children's play area</li>
+                          </ul>
+                          <p>Just add an apostrophe to plural nouns that already end in s. For example:</p>
+                          <ul>
+                            <li>ladies' room</li>
+                            <li>parents' evening</li>
+                          </ul>
+                          <p><em>Never</em> use an apostrophe to indicate a plural. This also applies to initials, abbreviations and numbers. For example:</p>
+                          <ul>
+                            <li>DVDs</li>
+                            <li>1990s</li>
+                          </ul>
+                          <p>An apostrophe is used in contractions to indicate that something is missing. For example:</p>
+                          <ul>
+                            <li>That DVD is rubbish becomes That DVD's rubbish</li>
+                            <li>Cannot becomes can't</li>
+                            <li>because becomes 'cause</li>
+                          </ul>
+                          <p>It's should only be written to shorten it is or it has. When it's is being used as a pronoun (like his or her) it never takes an apostrophe.</p>
+                          <ul>
+                            <li><strong>Correct:</strong> Never judge a book by its cover.</li>
+                            <li><strong>Incorrect:</strong> Never judge a book by it's cover.</li>
+                          </ul>
+                        </td>
+                      </tr>
+                    </table>
+                  </p>
+                </div>
+              </div>
+              <div class="card" id="si-Grammar&amp;Punctuation-Capitalletters" primarysort="2" secondarysort="Style_Guide">
+                <h5 class="alert alert-success">
+                  <a data-toggle="collapse" data-target="#si-Capitalletters" href="javascript:void(0);">
+                    <span class="badge role-icon badge-success">Style Guide</span>
+                    <span>Capital letters</span>
+                  </a>
+                </h5>
+                <div id="si-Capitalletters" class="card-body card-normal collapse">
+                  <p>
+                    <table width="100%" cellpadding="2" class="table table-condensed table-bordered">
+                      <th colspan="2">Job Spec</th>
+                      <tr>
+                        <td>
+                          <p>New sentences begin with a capital letter. Very self explanatory. The only exception is when a sentence starts with a brand name that purposefully has a lowercase first letter. For example, 'iPhone sales are better this year'.</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </p>
+                </div>
+              </div>
+              <div class="card" id="si-Grammar&amp;Punctuation-Commas" primarysort="2" secondarysort="Style_Guide">
+                <h5 class="alert alert-success">
+                  <a data-toggle="collapse" data-target="#si-Commas" href="javascript:void(0);">
+                    <span class="badge role-icon badge-success">Style Guide</span>
+                    <span>Commas</span>
+                  </a>
+                </h5>
+                <div id="si-Commas" class="card-body card-normal collapse">
+                  <p>
+                    <table width="100%" cellpadding="2" class="table table-condensed table-bordered">
+                      <th colspan="2">Job Spec</th>
+                      <tr>
+                        <td>
+                          <p>Commas are used to seperate independent clauses in the same sentence.</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </p>
+                </div>
+              </div>
+              <div class="card" id="si-Grammar&amp;Punctuation-Copyrightedmaterial" primarysort="2" secondarysort="Style_Guide">
+                <h5 class="alert alert-success">
+                  <a data-toggle="collapse" data-target="#si-Copyrightedmaterial" href="javascript:void(0);">
+                    <span class="badge role-icon badge-success">Style Guide</span>
+                    <span>Copyrighted material</span>
+                  </a>
+                </h5>
+                <div id="si-Copyrightedmaterial" class="card-body card-normal collapse">
+                  <p>
+                    <table width="100%" cellpadding="2" class="table table-condensed table-bordered">
+                      <th colspan="2">Job Spec</th>
+                      <tr>
+                        <td>
+                          <p>Films, songs, books, pieces of art, or anything that is copyrighted are capitalised. For example:</p>
+                          <ul>
+                            <li>Star Wars</li>
+                            <li>Hot Shots! Part Deux</li>
+                            <li>The BFG</li>
+                            <li>Waterloo</li>
+                            <li>Terminator 2</li>
+                            <li>WALL-E</li>
+                            <p>If the word/s are normally capitalised in unusal ways, then follow the unusual way. For example, iPod capitcalises the P.</p>
+                          </ul>
+                        </td>
+                      </tr>
+                    </table>
+                  </p>
+                </div>
+              </div>
+              <div class="card" id="si-Grammar&amp;Punctuation-Currencyandmoneytypednumerically" primarysort="2" secondarysort="Style_Guide">
+                <h5 class="alert alert-success">
+                  <a data-toggle="collapse" data-target="#si-Currencyandmoneytypednumerically" href="javascript:void(0);">
+                    <span class="badge role-icon badge-success">Style Guide</span>
+                    <span>Currency and money typed numerically</span>
+                  </a>
+                </h5>
+                <div id="si-Currencyandmoneytypednumerically" class="card-body card-normal collapse">
+                  <p>
+                    <table width="100%" cellpadding="2" class="table table-condensed table-bordered">
+                      <th colspan="2">Job Spec</th>
+                      <tr>
+                        <td>
+                          <p>Money is typed as signs and numerals and not words. Type &#163;5 instead of 5 pounds. Furthermore 250k or 250 grand are all acceptable if that is what the person said.</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </p>
+                </div>
+              </div>
+              <div class="card" id="si-Grammar&amp;Punctuation-Diacritics" primarysort="2" secondarysort="Style_Guide">
+                <h5 class="alert alert-success">
+                  <a data-toggle="collapse" data-target="#si-Diacritics" href="javascript:void(0);">
+                    <span class="badge role-icon badge-success">Style Guide</span>
+                    <span>Diacritics</span>
+                  </a>
+                </h5>
+                <div id="si-Diacritics" class="card-body card-normal collapse">
+                  <p>
+                    <table width="100%" cellpadding="2" class="table table-condensed table-bordered">
+                      <th colspan="2">Job Spec</th>
+                      <tr>
+                        <td>
+                          <p>A diacritic is a glyph added to a letter. The main use of diacritical marks in the Latin script is to change the sound-value of the letter to which they are added. For example: I&#241;t&#235;rn&#226;ti&#244;n&#224;liz&#230;ti&#248;n is full of diacrtics. The software should autocorrect common words with diacritics. For example, cafe is automatically corrected to caf&#233;.</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </p>
+                </div>
+              </div>
+              <div class="card" id="si-Grammar&amp;Punctuation-Generalnumbers" primarysort="2" secondarysort="Style_Guide">
+                <h5 class="alert alert-success">
+                  <a data-toggle="collapse" data-target="#si-Generalnumbers" href="javascript:void(0);">
+                    <span class="badge role-icon badge-success">Style Guide</span>
+                    <span>General numbers</span>
+                  </a>
+                </h5>
+                <div id="si-Generalnumbers" class="card-body card-normal collapse">
+                  <p>
+                    <table width="100%" cellpadding="2" class="table table-condensed table-bordered">
+                      <th colspan="2">Job Spec</th>
+                      <tr>
+                        <td>
+                          <p>Excluding dates, measurements, weights and money, the numbers 0 - 10 are typed as words (zero to ten), and then 11+ as numerals. For example, the number 1 is typed as one, but the number 12 is typed as 12.</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </p>
+                </div>
+              </div>
+              <div class="card" id="si-Grammar&amp;Punctuation-Measurements" primarysort="2" secondarysort="Style_Guide">
+                <h5 class="alert alert-success">
+                  <a data-toggle="collapse" data-target="#si-Measurements" href="javascript:void(0);">
+                    <span class="badge role-icon badge-success">Style Guide</span>
+                    <span>Measurements</span>
+                  </a>
+                </h5>
+                <div id="si-Measurements" class="card-body card-normal collapse">
+                  <p>
+                    <table width="100%" cellpadding="2" class="table table-condensed table-bordered">
+                      <th colspan="2">Job Spec</th>
+                      <tr>
+                        <td>
+                          <p>Measurements are typed as signs and numerals, not words. For example: 5m instead of five metres.</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </p>
+                </div>
+              </div>
+              <div class="card" id="si-Grammar&amp;Punctuation-Periods" primarysort="2" secondarysort="Style_Guide">
+                <h5 class="alert alert-success">
+                  <a data-toggle="collapse" data-target="#si-Periods" href="javascript:void(0);">
+                    <span class="badge role-icon badge-success">Style Guide</span>
+                    <span>Periods</span>
+                  </a>
+                </h5>
+                <div id="si-Periods" class="card-body card-normal collapse">
+                  <p>
+                    <table width="100%" cellpadding="2" class="table table-condensed table-bordered">
+                      <th colspan="2">Job Spec</th>
+                      <tr>
+                        <td>
+                          <p>Periods or full stops represent the end of a sentence. A single space is always used after a full space. For example:</p>
+                          <ul>
+                            <li>End of sentence. Start of new sentence.</li>
+                          </ul>
+                        </td>
+                      </tr>
+                    </table>
+                  </p>
+                </div>
+              </div>
+              <div class="card" id="si-Grammar&amp;Punctuation-Weights" primarysort="2" secondarysort="Style_Guide">
+                <h5 class="alert alert-success">
+                  <a data-toggle="collapse" data-target="#si-Weights" href="javascript:void(0);">
+                    <span class="badge role-icon badge-success">Style Guide</span>
+                    <span>Weights</span>
+                  </a>
+                </h5>
+                <div id="si-Weights" class="card-body card-normal collapse">
+                  <p>
+                    <table width="100%" cellpadding="2" class="table table-condensed table-bordered">
+                      <th colspan="2">Job Spec</th>
+                      <tr>
+                        <td>
+                          <p>Weights are typed as signs and numerals, not words. For example: 5g instead of five grams.</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="tab-SupportMaterial" style="padding-bottom: 40px;">
+            <h3 class="cathead">Support Material</h3>
+            <p>Any job specs that relate specifically to support material can be found in this section.</p>
+            <div class="catcards">
+              <div class="card" id="si-SupportMaterial-Research" primarysort="2" secondarysort="Style_Guide">
+                <h5 class="alert alert-success">
+                  <a data-toggle="collapse" data-target="#si-Research" href="javascript:void(0);">
+                    <span class="badge role-icon badge-success">Style Guide</span>
+                    <span>Research</span>
+                  </a>
+                </h5>
+                <div id="si-Research" class="card-body card-normal collapse">
+                  <p>
+                    <table width="100%" cellpadding="2" class="table table-condensed table-bordered">
+                      <th colspan="2">Job Spec</th>
+                      <tr>
+                        <td>
+                          <p>Any unfamiliar people and place names need to be researched with Google. It only takes a moment to check a spelling. Never spend more than 30 seconds checking a spelling.</p>
+                          <p>Contextual information will increase the chances of a successful search. It is easy to search for a word in the software by highlighting it and pressing CRTL + G.</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </p>
+                  <div class="troubleshootingopen">
+                    <h5 style="padding-top: 30px;" class="troubleshootingheader">Troubleshooting tips:</h5>
+                    <table width="100%" cellpadding="2" class="table table-condensed table-bordered">
+                      <tr>
+                        <th class="troubleshooting" width="180px">Problem</th>
+                        <th class="troubleshooting">Solution</th>
+                      </tr>
+                      <tr>
+                        <td class="troubleshooting">Informed Google search</td>
+                        <td class="troubleshooting">If there is a name, word, phrase or specialist term that needs varifying with an internet search, then it is easy to search for the word by highlighting it and pressing CRTL + G. If the search results do not provide the correct spelling, an informed search can be done by adding keywords to the Google search. For example, searching for Steve McQueen will likely show results for the actor who starred in The Great Escape. However, adding '12 Years a Slave' to the search will show results for a recent director with the same name.</td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="card" id="si-SupportMaterial-Usingsourcescriptsandsupportmaterial" primarysort="2" secondarysort="Style_Guide">
+                <h5 class="alert alert-success">
+                  <a data-toggle="collapse" data-target="#si-Usingsourcescriptsandsupportmaterial" href="javascript:void(0);">
+                    <span class="badge role-icon badge-success">Style Guide</span>
+                    <span>Using source scripts and support material</span>
+                  </a>
+                </h5>
+                <div id="si-Usingsourcescriptsandsupportmaterial" class="card-body card-normal collapse">
+                  <p>
+                    <table width="100%" cellpadding="2" class="table table-condensed table-bordered">
+                      <th colspan="2">Job Spec</th>
+                      <tr>
+                        <td>
+                          <p>A source script should have been provided, and it must be used.</p>
+                          <p>Support material is provided to us by the client, it is not created by Vitac.</p>
+                          <p>Support material can come in many forms, such as a credits list, contributor list, or a glossary of terms. However, the most common type of support material provided for post-edit jobs is the source script.</p>
+                          <p>Source scripts are commonly available for scripted shows, but are rarely available for reality / documentary shows. If a source script has been provided, this is particularly useful for finding key names, phrases, and hard-to-hear dialogue. Try to follow the source script whilst typing the script, and unless you are instructed otherwise, you must follow the speaker name format. E.g. If Job Bloggs has the speaker label "Bloggs" in the source script, you must use this speaker name in your own script.</p>
+                          <p>If support material has been provided, the client expects it to be visible and referred to whilst typing the script.</p>
+                          <p/>
+                          <div class="alert alert-info" role="alert">TIP: Consider opening the source material on a second screen or printing it out in order to fulfil this expectation.</div>
+                          <p/>
+                          <div class="alert alert-danger" role="alert">WARNING: Our most-commonly received complaint is when a mistake could have been prevented by using the source material. These mistakes will be perceived as negligent and inattentive by the client. </div>
+                        </td>
+                      </tr>
+                    </table>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>$(document).ready(function () {$("#sidebar").mCustomScrollbar({ theme: "minimal" }); $('#sidebarCollapse').on('click', function () { $('#sidebar, #content').toggleClass('active'); $('.collapse.in').toggleClass('in'); $('a[aria-expanded=true]').attr('aria-expanded', 'false'); }); });</script>
+  </body>
+</html>
